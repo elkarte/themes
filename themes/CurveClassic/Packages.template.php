@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @name      Elkarte Forum
- * @copyright Elkarte Forum contributors
+ * @name      ElkArte Forum
+ * @copyright ElkArte Forum contributors
  * @license   BSD http://opensource.org/licenses/BSD-3-Clause
  *
  * This software is a derived product, based on:
@@ -240,9 +240,11 @@ function template_view_package()
 					<tr class="catbg">
 						<td></td>
 						<td align="center">';
+
 				if (!empty($context['themes_locked']))
 					echo '
 							<input type="hidden" name="custom_theme[]" value="', $id, '" />';
+
 				echo '
 							<input type="checkbox" name="custom_theme[]" id="custom_theme_', $id, '" value="', $id, '" class="input_check" onclick="', (!empty($theme['has_failure']) ? 'if (this.form.custom_theme_' . $id . '.checked && !confirm(\'' . $txt['package_theme_failure_warning'] . '\')) return false;' : ''), 'invertAll(this, this.form, \'dummy_theme_', $id, '\', true);" ', !empty($context['themes_locked']) ? 'disabled="disabled" checked="checked"' : '', '/>
 						</td>
@@ -556,7 +558,7 @@ function template_browse()
 			window.ourVersion = "', $context['forum_version'], '";
 		// ]]></script>';
 
-		if (empty($modSettings['disable_smf_js']))
+		if (empty($modSettings['disable_elk_js']))
 			echo '
 		<script type="text/javascript" src="', $scripturl, '?action=viewadminfile;filename=latest-packages.js"></script>';
 
@@ -595,11 +597,11 @@ function template_browse()
 		<form action="', $scripturl, '?action=admin;area=packages;sa=', $context['sub_action'], '" method="get">
 			<div id="advanced_panel_header" class="cat_bar">
 				<h3 class="catbg">
-					<img id="advanced_panel_toggle" class="panel_toggle" style="display: none;" src="', $settings['images_url'], '/', empty($context['show_advanced_options']) ? 'collapse' : 'expand', '.png" alt="*" />
+					<img id="advanced_panel_toggle" class="panel_toggle" style="display: none;" src="', $settings['images_url'], '/', empty($context['admin_preferences']['pkg']) ? 'collapse' : 'expand', '.png" alt="*" />
 					<a href="#" id="advanced_panel_link">', $txt['package_advanced_button'], '</a>
 				</h3>
 			</div>
-			<div id="advanced_panel_div" class="windowbg">
+			<div id="advanced_panel_div" class="windowbg"', empty($context['admin_preferences']['apn']) ? '' : ' style="display: none;"', '>
 				<div class="content">
 					<p>
 						', $txt['package_emulate_desc'], '
@@ -631,7 +633,7 @@ function template_browse()
 	<script type="text/javascript"><!-- // --><![CDATA[
 		var oAdvancedPanelToggle = new smc_Toggle({
 			bToggleEnabled: true,
-			bCurrentlyCollapsed: ', empty($context['show_advanced_options']) ? 'true' : 'false', ',
+			bCurrentlyCollapsed: ', empty($context['admin_preferences']['pkg']) ? 'true' : 'false', ',
 			aSwappableContainers: [
 				\'advanced_panel_div\'
 			],
@@ -657,6 +659,7 @@ function template_browse()
 				sSessionVar: smf_session_var,
 				sSessionId: smf_session_id,
 				sThemeId: \'1\'
+				sAdditionalVars: \';admin_key=pkg\'
 			}
 		});
 	// ]]></script>

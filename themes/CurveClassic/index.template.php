@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @name      Elkarte Forum
- * @copyright Elkarte Forum contributors
+ * @name      ElkArte Forum
+ * @copyright ElkArte Forum contributors
  * @license   BSD http://opensource.org/licenses/BSD-3-Clause
  *
  * This software is a derived product, based on:
@@ -35,8 +35,6 @@
 	The menu sub template should display all the relevant buttons the user
 	wants and or needs.
 
-	For more information on the templating system, please see the site at:
-	http://www.simplemachines.org/
 */
 
 /**
@@ -173,11 +171,11 @@ function template_body_above()
 				<img id="upshrink" src="', $settings['images_url'], '/upshrink.png" alt="*" title="', $txt['upshrink_description'], '" style="display: none;" />';
 
 	echo empty($settings['site_slogan']) ? '
-				<img id="logo" src="' . $settings['images_url'] . '/logo_sm.png" alt="Elkarte Community" title="Elkarte Community" />' : '
+				<img id="logo" src="' . $settings['images_url'] . '/logo_elk.png" alt="Elkarte Community" title="Elkarte Community" />' : '
 				<div id="siteslogan" class="floatright">' . $settings['site_slogan'] . '</div>', '
 			</div>
 			<div id="upper_wrap">
-				<div id="upper_section" ', empty($options['collapse_header']) ? '' : ' style="display: none;"', '>
+				<div id="upper_section" ', empty($context['minmax_preferences']['head']) ? '' : ' style="display: none;"', '>
 					<div class="user">';
 
 	// If the user is logged in, display stuff like their name, new messages, etc.
@@ -260,17 +258,23 @@ function template_body_above()
 							<select name="search_selection">
 								<option value="all"', ($selected == 'all' ? ' selected="selected"' : ''), '>', $txt['search_entireforum'], ' </option>';
 
-		// Can't limit it to a specific topic if we are not in one
-		if (!empty($context['current_topic']))
-			echo '
+			// Can't limit it to a specific topic if we are not in one
+			if (!empty($context['current_topic']))
+				echo '
 								<option value="topic"', ($selected == 'current_topic' ? ' selected="selected"' : ''), '>', $txt['search_thistopic'], '</option>';
 
-		// Can't limit it to a specific board if we are not in one
-		if (!empty($context['current_board']))
+			// Can't limit it to a specific board if we are not in one
+			if (!empty($context['current_board']))
+				echo '
+					<option value="board"', ($selected == 'current_board' ? ' selected="selected"' : ''), '>', $txt['search_thisbrd'], '</option>';
+
+			if (!empty($context['additional_dropdown_search']))
+				foreach ($context['additional_dropdown_search'] as $name => $engine)
+					echo '
+					<option value="', $name, '">', $engine['name'], '</option>';
+
 			echo '
-								<option value="board"', ($selected == 'current_board' ? ' selected="selected"' : ''), '>', $txt['search_thisbrd'], '</option>';
-			echo '
-								<option value="members"', ($selected == 'members' ? ' selected="selected"' : ''), '>', $txt['search_members'], ' </option>
+					<option value="members"', ($selected == 'members' ? ' selected="selected"' : ''), '>', $txt['search_members'], ' </option>
 							</select>';
 		}
 
@@ -304,7 +308,7 @@ function template_body_above()
 			<script type="text/javascript"><!-- // --><![CDATA[
 				var oMainHeaderToggle = new smc_Toggle({
 					bToggleEnabled: true,
-					bCurrentlyCollapsed: ', empty($options['collapse_header']) ? 'false' : 'true', ',
+					bCurrentlyCollapsed: ', empty($context['minmax_preferences']['head']) ? 'false' : 'true', ',
 					aSwappableContainers: [
 						\'upper_section\'
 					],
@@ -319,9 +323,10 @@ function template_body_above()
 					],
 					oThemeOptions: {
 						bUseThemeSettings: smf_member_id == 0 ? false : true,
-						sOptionName: \'collapse_header\',
+						sOptionName: \'minmax_preferences\',
 						sSessionVar: smf_session_var,
-						sSessionId: smf_session_id
+						sSessionId: smf_session_id,
+						sAdditionalVars: \';minmax_key=head\'
 					},
 					oCookieOptions: {
 						bUseCookie: smf_member_id == 0 ? true : false,
@@ -376,7 +381,7 @@ function template_body_below()
 			<ul class="reset">
 				<li class="copyright">', theme_copyright(), '</li>
 				<li><a id="button_xhtml" href="http://validator.w3.org/check?uri=referer" target="_blank" class="new_win" title="', $txt['valid_xhtml'], '"><span>', $txt['xhtml'], '</span></a></li>
-				', !empty($modSettings['xmlnews_enable']) && (!empty($modSettings['allow_guestAccess']) || $context['user']['is_logged']) && !empty($modSettings['rss_limit']) ? '<li><a id="button_rss" href="' . $scripturl . '?action=.xml;type=rss;limit=' . $modSettings['rss_limit'] . '" class="new_win"><span>' . $txt['rss'] . '</span></a></li>' : '', '
+				', !empty($modSettings['xmlnews_enable']) && (!empty($modSettings['allow_guestAccess']) || $context['user']['is_logged']) ? '<li><a id="button_rss" href="' . $scripturl . '?action=.xml;type=rss;limit=' . (!empty($modSettings['xmlnews_limit']) ? $modSettings['xmlnews_limit'] : 5) . '" class="new_win"><span>' . $txt['rss'] . '</span></a></li>' : '', '
 			</ul>';
 
 	// Show the load time?
@@ -560,4 +565,68 @@ function template_button_strip($button_strip, $direction = '', $strip_options = 
 				implode('', $buttons), '
 			</ul>
 		</div>';
+}
+
+function template_show_error($error_id)
+{
+	global $context;
+
+	if (empty($error_id))
+		return;
+
+	$error = !empty($context[$error_id]) ? $context[$error_id] : null;
+
+	echo '
+					<div class="', (!isset($error['type']) ? 'infobox' : ($error['type'] !== 'serious' ? 'noticebox' : 'errorbox')), '" ', empty($error['errors']) ? ' style="display: none"' : '', ' id="', $error_id, '">';
+	if (!empty($error['title']))
+		echo '
+						<dl>
+							<dt>
+								<strong id="', $error_id, '_title">', $error['title'], '</strong>
+							</dt>
+							<dd>';
+	if (!empty($error['errors']))
+	{
+		echo '
+								<ul class="error" id="', $error_id, '_list">';
+
+		foreach ($error['errors'] as $key => $error)
+			echo '
+									<li id="', $error_id, '_', $key, '">', $error, '</li>';
+		echo '
+								</ul>';
+	}
+	if (!empty($error['title']))
+		echo '
+							</dd>
+						</dl>';
+	echo '
+					</div>';
+}
+
+function template_select_boards($name, $label = '', $extra = '')
+{
+	global $context;
+
+	if (!empty($label))
+		echo '
+	<label for="', $name, '">', $label, ' </label>';
+
+	echo '
+	<select name="', $name, '" id="', $name, '" ', $extra, ' >';
+
+	foreach ($context['categories'] as $category)
+	{
+		echo '
+		<optgroup label="', $category['name'], '">';
+
+		foreach ($category['boards'] as $board)
+			echo '
+			<option value="', $board['id'], '"', !empty($board['selected']) ? ' selected="selected"' : '', !empty($context['current_board']) && $board['id'] == $context['current_board'] ? ' disabled="disabled"' : '', '>', $board['child_level'] > 0 ? str_repeat('==', $board['child_level'] - 1) . '=&gt; ' : '', $board['name'], '</option>';
+		echo '
+		</optgroup>';
+	}
+
+	echo '
+					</select>';
 }

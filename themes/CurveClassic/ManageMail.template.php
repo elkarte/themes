@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @name      Elkarte Forum
- * @copyright Elkarte Forum contributors
+ * @name      ElkArte Forum
+ * @copyright ElkArte Forum contributors
  * @license   BSD http://opensource.org/licenses/BSD-3-Clause
  *
  * This software is a derived product, based on:
@@ -14,7 +14,7 @@
  * @version 1.0 Alpha
  */
 
-function template_browse()
+function template_mail_queue()
 {
 	global $context, $settings, $options, $scripturl, $txt;
 

@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @name      Elkarte Forum
- * @copyright Elkarte Forum contributors
+ * @name      ElkArte Forum
+ * @copyright ElkArte Forum contributors
  * @license   BSD http://opensource.org/licenses/BSD-3-Clause
  *
  * This software is a derived product, based on:
@@ -34,23 +34,7 @@ function template_main()
 							<dt>
 								<strong>', $txt['move_to'], ':</strong>
 							</dt>
-							<dd>
-								<select name="toboard">';
-
-	foreach ($context['categories'] as $category)
-	{
-		echo '
-									<optgroup label="', $category['name'], '">';
-
-		foreach ($category['boards'] as $board)
-			echo '
-										<option value="', $board['id'], '"', $board['selected'] ? ' selected="selected"' : '', $board['id'] == $context['current_board'] ? ' disabled="disabled"' : '', '>', $board['child_level'] > 0 ? str_repeat('==', $board['child_level']-1) . '=&gt; ' : '', $board['name'], '</option>';
-		echo '
-									</optgroup>';
-	}
-
-	echo '
-								</select>
+							<dd>', template_select_boards('toboard'), '
 							</dd>';
 
 	// Disable the reason textarea when the postRedirect checkbox is unchecked...
