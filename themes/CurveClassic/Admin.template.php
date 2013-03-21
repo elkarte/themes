@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @name      Elkarte Forum
- * @copyright Elkarte Forum contributors
+ * @name      ElkArte Forum
+ * @copyright ElkArte Forum contributors
  * @license   BSD http://opensource.org/licenses/BSD-3-Clause
  *
  * This software is a derived product, based on:
@@ -103,7 +103,7 @@ function template_admin()
 	</div>';
 
 	// The below functions include all the scripts needed from the simplemachines.org site. The language and format are passed for internationalization.
-	if (empty($modSettings['disable_smf_js']))
+	if (empty($modSettings['disable_elk_js']))
 		echo '
 		<script type="text/javascript" src="', $scripturl, '?action=viewadminfile;filename=current-version.js"></script>
 		<script type="text/javascript" src="', $scripturl, '?action=viewadminfile;filename=latest-news.js"></script>';
@@ -575,7 +575,7 @@ function template_view_versions()
 				<tbody>
 					<tr>
 						<td class="windowbg" width="50%">
-							<a href="#" id="Default-link">', $txt['dvc_default'], '</a>
+							<a href="#" id="default-link">', $txt['dvc_default'], '</a>
 						</td>
 						<td class="windowbg" width="25%">
 							<em id="yourdefault">??</em>
@@ -587,7 +587,7 @@ function template_view_versions()
 				</tbody>
 			</table>
 
-			<table id="Default" width="100%" class="table_grid">
+			<table id="default" width="100%" class="table_grid">
 				<tbody>';
 
 	foreach ($context['default_template_versions'] as $filename => $version)
