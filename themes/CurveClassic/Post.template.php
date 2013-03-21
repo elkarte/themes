@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @name      Elkarte Forum
- * @copyright Elkarte Forum contributors
+ * @name      ElkArte Forum
+ * @copyright ElkArte Forum contributors
  * @license   BSD http://opensource.org/licenses/BSD-3-Clause
  *
  * This software is a derived product, based on:
@@ -76,17 +76,7 @@ function template_main()
 					<input type="hidden" name="topic" value="' . $context['current_topic'] . '" />' : '';
 
 	// If an error occurred, explain what happened.
-	echo '
-					<div class="', empty($context['error_type']) || $context['error_type'] != 'serious' ? 'noticebox' : 'errorbox', '"', empty($context['post_error']) ? ' style="display: none"' : '', ' id="errors">
-						<dl>
-							<dt>
-								<strong id="error_serious">', $txt['error_while_submitting'], '</strong>
-							</dt>
-							<dd class="error" id="error_list">
-								', empty($context['post_error']) ? '' : implode('<br />', $context['post_error']), '
-							</dd>
-						</dl>
-					</div>';
+	template_show_error('post_error');
 
 	// If this won't be approved let them know!
 	if (!$context['becomes_approved'])
@@ -141,7 +131,7 @@ function template_main()
 							<span', isset($context['post_error']['no_subject']) ? ' class="error"' : '', ' id="caption_subject">', $txt['subject'], ':</span>
 						</dt>
 						<dd>
-							<input type="text" name="subject"', $context['subject'] == '' ? '' : ' value="' . $context['subject'] . '"', ' tabindex="', $context['tabindex']++, '" size="80" maxlength="80"', isset($context['post_error']['no_subject']) ? ' class="error"' : ' class="input_text"', '/>
+							<input id="post_subject" type="text" name="subject"', $context['subject'] == '' ? '' : ' value="' . $context['subject'] . '"', ' tabindex="', $context['tabindex']++, '" size="80" maxlength="80"', isset($context['post_error']['no_subject']) ? ' class="error"' : ' class="input_text"', '/>
 						</dd>
 						<dt class="clear_left">
 							', $txt['message_icon'], ':
@@ -233,20 +223,7 @@ function template_main()
 			{
 				echo '
 									<li>
-										', $txt['calendar_post_in'], '
-										<select name="board">';
-				foreach ($context['event']['categories'] as $category)
-				{
-					echo '
-											<optgroup label="', $category['name'], '">';
-					foreach ($category['boards'] as $board)
-						echo '
-												<option value="', $board['id'], '"', $board['selected'] ? ' selected="selected"' : '', '>', $board['child_level'] > 0 ? str_repeat('==', $board['child_level'] - 1) . '=&gt;' : '', ' ', $board['name'], '&nbsp;</option>';
-					echo '
-											</optgroup>';
-				}
-				echo '
-										</select>
+										', template_select_boards('board', $txt['calendar_post_in']), '
 									</li>';
 			}
 
@@ -288,10 +265,10 @@ function template_main()
 		echo '
 					<div id="postAdditionalOptionsHeader" class="title_bar">
 						<h4 class="titlebg">
-							<img id="postMoreExpand" class="panel_toggle" style="display: none;" src="', $settings['images_url'], '/collapse.png" alt="-" /> <strong><a href="#" id="postMoreExpandLink">', $context['can_post_attachment'] ? $txt['post_additionalopt_attach'] : $txt['post_additionalopt'], '</a></strong>
+							<img id="postMoreExpand" class="panel_toggle" style="display: none;" src="', $settings['images_url'], '/', empty($context['minmax_preferences']['post']) ? 'collapse' : 'expand', '.png" alt="-" /> <strong><a href="#" id="postMoreExpandLink">', $context['can_post_attachment'] ? $txt['post_additionalopt_attach'] : $txt['post_additionalopt'], '</a></strong>
 						</h4>
 					</div>
-					<div id="postAdditionalOptions">';
+					<div id="postAdditionalOptions"', empty($context['minmax_preferences']['post']) ? '' : ' style="display: none;"', '>';
 
 	// Display the check boxes for all the standard options - if they are available to the user!
 	echo '
@@ -351,18 +328,19 @@ function template_main()
 							<dd class="smalltext">
 								', empty($modSettings['attachmentSizeLimit']) ? '' : ('<input type="hidden" name="MAX_FILE_SIZE" value="' . $modSettings['attachmentSizeLimit'] * 1028 . '" />'), '
 								<input type="file" size="60" multiple="multiple" name="attachment[]" id="attachment1" class="input_file" /> (<a href="javascript:void(0);" onclick="cleanFileInput(\'attachment1\');">', $txt['clean_attach'], '</a>)';
+
 			// Show more boxes if they aren't approaching that limit.
 			if ($context['num_allowed_attachments'] > 1)
 				echo '
-									<script type="text/javascript"><!-- // --><![CDATA[
-										var allowed_attachments = ', $context['num_allowed_attachments'], ';
-										var current_attachment = 1;
-										var txt_more_attachments_error = "', $txt['more_attachments_error'], '";
-										var txt_more_attachments = "', $txt['more_attachments'], '";
-										var txt_clean_attach = "', $txt['clean_attach'], '";
-									// ]]></script>
-								</dd>
-								<dd class="smalltext" id="moreAttachments"><a href="#" onclick="addAttachment(); return false;">(', $txt['more_attachments'], ')</a></dd>';
+								<script type="text/javascript"><!-- // --><![CDATA[
+									var allowed_attachments = ', $context['num_allowed_attachments'], ';
+									var current_attachment = 1;
+									var txt_more_attachments_error = "', $txt['more_attachments_error'], '";
+									var txt_more_attachments = "', $txt['more_attachments'], '";
+									var txt_clean_attach = "', $txt['clean_attach'], '";
+								// ]]></script>
+							</dd>
+							<dd class="smalltext" id="moreAttachments"><a href="#" onclick="addAttachment(); return false;">(', $txt['more_attachments'], ')</a></dd>';
 			else
 				echo '
 							</dd>';
@@ -398,6 +376,7 @@ function template_main()
 
 	echo '
 					</div>';
+
 	// If the admin enabled the drafts feature, show a draft selection box
 	if (!empty($modSettings['drafts_enabled']) && !empty($context['drafts']) && !empty($options['drafts_show_saved_enabled']))
 	{
@@ -405,10 +384,10 @@ function template_main()
 					<br />
 					<div id="postDraftOptionsHeader" class="title_bar">
 						<h4 class="titlebg">
-							<img id="postDraftExpand" class="panel_toggle" style="display: none;" src="', $settings['images_url'], '/collapse.png" alt="-" /> <strong><a href="#" id="postDraftExpandLink">', $txt['draft_load'], '</a></strong>
+							<img id="postDraftExpand" class="panel_toggle" style="display: none;" src="', $settings['images_url'], '/', empty($context['minmax_preferences']['draft']) ? 'collapse' : 'expand', '.png" alt="-" /> <strong><a href="#" id="postDraftExpandLink">', $txt['draft_load'], '</a></strong>
 						</h4>
 					</div>
-					<div id="postDraftOptions" class="load_drafts padding">
+					<div id="postDraftOptions" class="load_drafts padding"', empty($context['minmax_preferences']['draft']) ? '' : ' style="display: none;"', '>>
 						<dl class="settings">
 							<dt><strong>', $txt['subject'], '</strong></dt>
 							<dd><strong>', $txt['draft_saved_on'], '</strong></dd>';
@@ -487,7 +466,7 @@ function template_main()
 		echo '
 			var oSwapAdditionalOptions = new smc_Toggle({
 				bToggleEnabled: true,
-				bCurrentlyCollapsed: ', $context['show_additional_options'] ? 'false' : 'true', ',
+				bCurrentlyCollapsed: ', empty($context['minmax_preferences']['post']) ? 'false' : 'true', ',
 				funcOnBeforeCollapse: function () {
 					document.getElementById(\'additional_options\').value = \'0\';
 				},
@@ -512,7 +491,14 @@ function template_main()
 						msgExpanded: ', JavaScriptEscape($context['can_post_attachment'] ? $txt['post_additionalopt_attach'] : $txt['post_additionalopt']), ',
 						msgCollapsed: ', JavaScriptEscape($context['can_post_attachment'] ? $txt['post_additionalopt_attach'] : $txt['post_additionalopt']), '
 					}
-				]
+				],
+				oThemeOptions: {
+					bUseThemeSettings: ', $context['user']['is_guest'] ? 'false' : 'true', ',
+					sOptionName: \'minmax_preferences\',
+					sSessionId: smf_session_id,
+					sSessionVar: smf_session_var,
+					sAdditionalVars: \';minmax_key=post\'
+				},
 			});';
 
 	// Code for showing and hiding drafts
@@ -520,7 +506,7 @@ function template_main()
 		echo '
 			var oSwapDraftOptions = new smc_Toggle({
 				bToggleEnabled: true,
-				bCurrentlyCollapsed: true,
+				bCurrentlyCollapsed: ', empty($context['minmax_preferences']['draft']) ? 'false' : 'true', ',
 				aSwappableContainers: [
 					\'postDraftOptions\',
 				],
@@ -539,7 +525,14 @@ function template_main()
 						msgExpanded: ', JavaScriptEscape($txt['draft_hide']), ',
 						msgCollapsed: ', JavaScriptEscape($txt['draft_load']), '
 					}
-				]
+				],
+				oThemeOptions: {
+					bUseThemeSettings: ', $context['user']['is_guest'] ? 'false' : 'true', ',
+					sOptionName: \'minmax_preferences\',
+					sSessionId: smf_session_id,
+					sSessionVar: smf_session_var,
+					sAdditionalVars: \';minmax_key=draft\'
+				},
 			});';
 
 	echo '
@@ -630,7 +623,7 @@ function template_main()
 // The template for the spellchecker.
 function template_spellcheck()
 {
-	global $context, $settings, $options, $txt;
+	global $context, $settings, $txt;
 
 	// The style information that makes the spellchecker look... like the forum hopefully!
 	echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -705,7 +698,7 @@ function template_spellcheck()
 
 function template_quotefast()
 {
-	global $context, $settings, $options, $txt;
+	global $context, $settings, $txt;
 
 	echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"', $context['right_to_left'] ? ' dir="rtl"' : '', '>
@@ -752,88 +745,4 @@ function template_quotefast()
 		// ]]></script>
 	</body>
 </html>';
-}
-
-function template_announce()
-{
-	global $context, $settings, $options, $txt, $scripturl;
-
-	echo '
-	<div id="announcement">
-		<form action="', $scripturl, '?action=announce;sa=send" method="post" accept-charset="UTF-8">
-			<div class="cat_bar">
-				<h3 class="catbg">', $txt['announce_title'], '</h3>
-			</div>
-			<div class="information">
-				', $txt['announce_desc'], '
-			</div>
-			<div class="windowbg2">
-				<div class="content">
-					<p>
-						', $txt['announce_this_topic'], ' <a href="', $scripturl, '?topic=', $context['current_topic'], '.0">', $context['topic_subject'], '</a>
-					</p>
-					<ul class="reset">';
-
-	foreach ($context['groups'] as $group)
-		echo '
-						<li>
-							<label for="who_', $group['id'], '"><input type="checkbox" name="who[', $group['id'], ']" id="who_', $group['id'], '" value="', $group['id'], '" checked="checked" class="input_check" /> ', $group['name'], '</label> <em>(', $group['member_count'], ')</em>
-						</li>';
-
-	echo '
-						<li>
-							<label for="checkall"><input type="checkbox" id="checkall" class="input_check" onclick="invertAll(this, this.form);" checked="checked" /> <em>', $txt['check_all'], '</em></label>
-						</li>
-					</ul>
-					<hr class="hrcolor" />
-					<div id="confirm_buttons">
-						<input type="submit" value="', $txt['post'], '" class="button_submit" />
-						<input type="hidden" name="', $context['session_var'], '" value="', $context['session_id'], '" />
-						<input type="hidden" name="topic" value="', $context['current_topic'], '" />
-						<input type="hidden" name="move" value="', $context['move'], '" />
-						<input type="hidden" name="goback" value="', $context['go_back'], '" />
-					</div>
-				</div>
-				<br class="clear_right" />
-			</div>
-		</form>
-	</div>
-	<br />';
-}
-
-function template_announcement_send()
-{
-	global $context, $settings, $options, $txt, $scripturl;
-
-	echo '
-	<div id="announcement">
-		<form action="' . $scripturl . '?action=announce;sa=send" method="post" accept-charset="UTF-8" name="autoSubmit" id="autoSubmit">
-			<div class="windowbg2">
-				<div class="content">
-					<p>', $txt['announce_sending'], ' <a href="', $scripturl, '?topic=', $context['current_topic'], '.0" target="_blank" class="new_win">', $context['topic_subject'], '</a></p>
-					<div class="progress_bar">
-						<div class="full_bar">', $context['percentage_done'], '% ', $txt['announce_done'], '</div>
-						<div class="green_percent" style="width: ', $context['percentage_done'], '%;">&nbsp;</div>
-					</div>
-					<hr class="hrcolor" />
-					<div id="confirm_buttons">
-						<input type="submit" name="b" value="', $txt['announce_continue'], '" class="button_submit" />
-						<input type="hidden" name="', $context['session_var'], '" value="', $context['session_id'], '" />
-						<input type="hidden" name="topic" value="', $context['current_topic'], '" />
-						<input type="hidden" name="move" value="', $context['move'], '" />
-						<input type="hidden" name="goback" value="', $context['go_back'], '" />
-						<input type="hidden" name="start" value="', $context['start'], '" />
-						<input type="hidden" name="membergroups" value="', $context['membergroups'], '" />
-					</div>
-				</div>
-				<br class="clear_right" />
-			</div>
-		</form>
-	</div>
-	<br />
-	<script type="text/javascript"><!-- // --><![CDATA[
-		var countdown = 2;
-		var txt_message = "', $txt['announce_continue'], '";
-		doAutoSubmit();
-	// ]]></script>';
 }

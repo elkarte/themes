@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @name      Elkarte Forum
- * @copyright Elkarte Forum contributors
+ * @name      ElkArte Forum
+ * @copyright ElkArte Forum contributors
  * @license   BSD http://opensource.org/licenses/BSD-3-Clause
  *
  * This software is a derived product, based on:
@@ -102,7 +102,7 @@ function template_permission_index()
 		echo '
 			<div class="cat_bar">
 				<h3 class="catbg">
-					<img id="permissions_panel_toggle" class="panel_toggle" style="display: none;" src="', $settings['images_url'], '/', empty($context['show_advanced_options']) ? 'collapse' : 'expand', '.png"  alt="*" />
+					<img id="permissions_panel_toggle" class="panel_toggle" style="display: none;" src="', $settings['images_url'], '/', empty($context['admin_preferences']['app']) ? 'collapse' : 'expand', '.png"  alt="*" />
 					<a href="#" id="permissions_panel_link">', $txt['permissions_advanced_options'], '</a>
 				</h3>
 			</div>
@@ -196,7 +196,7 @@ function template_permission_index()
 	<script type="text/javascript"><!-- // --><![CDATA[
 		var oPermissionsPanelToggle = new smc_Toggle({
 			bToggleEnabled: true,
-			bCurrentlyCollapsed: ', empty($context['show_advanced_options']) ? 'true' : 'false', ',
+			bCurrentlyCollapsed: ', empty($context['admin_preferences']['app']) ? 'true' : 'false', ',
 			aSwappableContainers: [
 				\'permissions_panel_advanced\'
 			],
