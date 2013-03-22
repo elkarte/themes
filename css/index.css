@@ -985,7 +985,7 @@ img.sort {
 }
 /* Needed for new PM notifications. */
 .dropmenu li strong {
-	color: #72A4A8;
+	color: #3C6A6D;
 }
 /* For the upshrink button in the main menu bar. */
 #collapse_button {
@@ -1121,7 +1121,7 @@ img.sort {
 	background: #E1EDE9 url(../images/theme/lower_section.png) 0 0 repeat-x;
 }
 .dropmenu li li:hover>a, .dropmenu li li.sfhover a:focus, .dropmenu li li a:hover, .dropmenu li li a:focus {
-	color: #72A4A8;
+	color: #3C7175;
 	text-decoration: none;
 	background: #E1EDE9 url(../images/theme/lower_section.png) 0 0 repeat-x;
 }
@@ -1226,7 +1226,7 @@ img.sort {
 	padding: 3px 7px 1px 7px;
 }
 .adm_section .dropmenu a:hover, .adm_section .dropmenu li:hover a, .adm_section .dropmenu li.sfhover a, .adm_section .dropmenu>li a:focus {
-	color: #72A4A8;
+	color: #3C6A6D;
 }
 .adm_section .dropmenu li ul {
 	top: -1px;
@@ -1244,7 +1244,7 @@ img.sort {
 	padding: 0 7px;
 }
 .adm_section .dropmenu li li a:hover {
-	color: #72A4A8;
+	color: #3C6A6D;
 	background: #E1EDE9 url(../images/theme/lower_section.png) 0 0 repeat-x;
 }
 /* Note: The next declarations are for keyboard access with js disabled. */
