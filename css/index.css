@@ -333,7 +333,7 @@ em {
 }
 /* Alterate blockquote stylings */
 .bbc_standard_quote {
-	background-color: #e0f6ef;
+	background-color: #cde1da;
 }
 .bbc_alternate_quote {
 	background-color: #ebf8f2;
@@ -3960,7 +3960,7 @@ span.hidelink {
 }
 .progress_bar div.green_percent {
 	height: 15pt;
-	background-color: #c1ffc1;
+	background-color: #e3f7e3;
 	background-image: -webkit-linear-gradient(top, #c1ffc1, green);
 	background-image: -moz-linear-gradient(top, #c1ffc1, green);
 	background-image: -ms-linear-gradient(top, #c1ffc1, green);
@@ -3971,7 +3971,7 @@ span.hidelink {
 }
 .progress_bar div.blue_percent {
 	height: 15pt;
-	background-color: #98b8f4;
+	background-color: #ace9ea;
 	background-image: -webkit-linear-gradient(top, #98b8f4, blue);
 	background-image: -moz-linear-gradient(top, #98b8f4, blue);
 	background-image: -ms-linear-gradient(top, #98b8f4, blue);
@@ -4041,7 +4041,7 @@ span.hidelink {
 /* Suspect it will be necessary to use float: left; width: 100%; on the windowbg and windowbg2 divs. */
 
 #forumposts .windowbg, #forumposts .windowbg2, #statistics .flow_hidden, #forumposts .approvebg, #forumposts .approvebg2, #personal_messages .windowbg, #personal_messages .windowbg2 {
-	background: /*#E8F4F4;#f0f4f7;*/ #E8F2EF;
+	background: #E8F2EF;
 	margin: 12px 0 0 0;
 	padding: 8px 8px 16px 8px;
 	border: 1px solid #ccc;
