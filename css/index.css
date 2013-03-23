@@ -90,7 +90,7 @@ input, button, select, textarea, textarea.editor {
 	font: 83.33%/150% "Segoe UI", "Helvetica Neue", "Liberation Sans", "Nimbus Sans L", Arial, sans-serif;
 	background: #fff;
 	outline: none !important;
-	border: 1px solid #276066;
+	border: 1px solid #276651;
 	vertical-align: middle;
 	border-radius: 3px;
 	box-shadow: 0 2px 5px rgba(0,0,0,0.05) inset;
@@ -133,7 +133,7 @@ input:focus, textarea:focus, button:focus, select:focus, textarea.editor:focus {
 	padding: 2px 4px;
 	float: right;
 	cursor: pointer;
-	background: #fdfeff;
+	background: #e7f8f0;
 	border: 1px solid #ccc;
 	border-right: 1px solid #bbb;
 	border-bottom: 1px solid #aaa;
@@ -326,17 +326,17 @@ em {
 	font-size: 0.9em;
 	text-indent: 12px;
 	background: url(../images/theme/quote.png) 2px 3px no-repeat;
-	border: 1px solid #d6dfe2;
+	border: 1px solid #d6e2db;
 	border-left: 2px solid #aaa;
 	border-right: 2px solid #aaa;
 	overflow: auto;
 }
 /* Alterate blockquote stylings */
 .bbc_standard_quote {
-	background-color: #e0e6f6;
+	background-color: #e0f6ef;
 }
 .bbc_alternate_quote {
-	background-color: #ebf4f8;
+	background-color: #ebf8f2;
 }
 
 /* A code block - maybe PHP ;). */
@@ -445,14 +445,14 @@ a img {
 /* Highlighted text - such as search results. */
 .highlight {
 	font-weight: bold;
-	color: #ff7200 !important;
+	color: #5a2911 !important;
 	font-size: 1.1em;
 }
 
 /* A more discreet highlight color, for selected membergroups etc. */
 /* Could be deprecated. Is used by JS to show a selected item */
 .highlight2 {
-	background: #D1E1EF;
+	background: #d1efdf;
 	color: #222 !important;
 	font-size: 1.1em;
 }
@@ -464,7 +464,7 @@ a img {
 	color: #444;
 	font-size: 1em;
 	font-weight: bold;
-	background: #BBCDCE 0 -340px repeat-x;
+	background: #b8cac3 0 -340px repeat-x;
 }
 .catbg, .catbg2, tr.catbg td, tr.catbg2 td, tr.catbg th, tr.catbg2 th {
 	color: #fff;
@@ -493,15 +493,15 @@ tr.catbg th a:link, tr.catbg th a:visited, tr.catbg2 td a:link, tr.catbg2 td a:v
 /* Alternating backgrounds for posts, and several other sections of the forum. */
 .windowbg, #preview_body {
 	color: #222;
-	background: #EAF2F0;
+	background: #e8eeed;
 }
 .windowbg2 {
 	color: #222;
-	background: #F7F6F4;
+	background: #d9e0dd;
 }
 .windowbg3 {
 	color: #222;
-	background: #cacdd3;
+	background: #d1dcd6;
 }
 
 /* General code for generic divs. Should make them behave. */
@@ -556,7 +556,7 @@ div.pagesection div.floatright input, div.pagesection div.floatright select {
 .topbottom {
 	display: block;
 	cursor: pointer;
-	background: #fff url(../images/theme/lower_section.png) 0 45% repeat-x;
+	background: #fff;
 	border: 1px solid #ccc;
 	border-right: 1px solid #bbb;
 	border-bottom: 1px solid #aaa;
@@ -568,7 +568,7 @@ div.pagesection div.floatright input, div.pagesection div.floatright select {
 }
 .topbottom:hover {
 	text-decoration: none;
-	background: #fff url(../images/theme/upper_section.png) 0 45% repeat-x;
+	background: #fff;
 	color: #704C2A;
 	text-decoration: none;
 	border: 1px solid #ccc;
@@ -599,12 +599,12 @@ div.pagesection div.floatright input, div.pagesection div.floatright select {
 
 /* Sometimes there will be an error when you post */
 .error {
-	color: red;
+	color: #8D2828;
 }
 
 /* Messages that somehow need to attract the attention. */
 .alert {
-	color: red;
+	color: #8D2828;
 }
 
 /* Calendar colors for birthdays, events and holidays */
@@ -620,7 +620,7 @@ div.pagesection div.floatright input, div.pagesection div.floatright select {
 
 /* Colors for warnings */
 .warn_mute {
-	color: red;
+	color: #8D2828;
 }
 .warn_moderate {
 	color: #8A7E66;
@@ -630,7 +630,7 @@ div.pagesection div.floatright input, div.pagesection div.floatright select {
 }
 
 a.moderation_link, a.moderation_link:visited {
-	color: red;
+	color: #8D2828;
 	font-weight: bold;
 }
 
@@ -1121,7 +1121,7 @@ img.sort {
 	background: #E1EDE9 url(../images/theme/lower_section.png) 0 0 repeat-x;
 }
 .dropmenu li li:hover>a, .dropmenu li li.sfhover a:focus, .dropmenu li li a:hover, .dropmenu li li a:focus {
-	color: #3C7175;
+	color: #115648;
 	text-decoration: none;
 	background: #E1EDE9 url(../images/theme/lower_section.png) 0 0 repeat-x;
 }
@@ -1184,7 +1184,7 @@ img.sort {
 	padding: 0 10px 1em 0;
 }
 .adm_section .cat_bar {
-	background: #E8F2EF;
+	background: #e8f2ef;
 	border: 1px solid #c8c8c8;
 	border-left: 1px solid #d8d8d8;
 	border-top: 1px solid #e2e2e2;
@@ -1212,7 +1212,7 @@ img.sort {
 	float: none;
 }
 .adm_section .dropmenu li:hover, .adm_section .dropmenu li.sfhover, #menu_current_area {
-	background: #fafafa;
+	background: #f3f6f4;
 	box-shadow: -1px -1px 2px rgba(0,0,0,0.1), 2px 2px 2px rgba(96,134,166,0.07) inset;
 	border: 1px solid #dfdfdf;
 	border-left: 1px solid #cfcfcf;
@@ -1244,7 +1244,7 @@ img.sort {
 	padding: 0 7px;
 }
 .adm_section .dropmenu li li a:hover {
-	color: #3C6A6D;
+	color: #3c6d52;
 	background: #E1EDE9 url(../images/theme/lower_section.png) 0 0 repeat-x;
 }
 /* Note: The next declarations are for keyboard access with js disabled. */
@@ -1319,7 +1319,7 @@ img.sort {
 	box-shadow: -1px -1px 2px rgba(0,0,0,0.1), -1px -2px 3px rgba(255,255,255,0.3) inset, 1px 2px 3px rgba(0,0,0,0.1) inset;
 }
 .buttonlist ul li a.active:hover {
-	color: #ffc187;
+	color: #a2cbbf;
 }
 .align_top ul li a, .align_bottom ul li a {
 	margin: 0 12px 0 0;
@@ -3698,7 +3698,7 @@ dl.addrules dt.floatleft {
 	background: #fff;
 }
 a.modify_event {
-	color: red;
+	color: #8D2828;
 }
 span.hidelink {
 	font-style: italic;
@@ -4049,10 +4049,10 @@ span.hidelink {
 	box-shadow: 0 -2px 2px rgba(0,0,0,0.1);
 }
 #forumposts .windowbg2, #personal_messages .windowbg2 {
-	background: #F7F6F4;
+	background: #e7ecea;
 }
 #statistics .flow_hidden {
-	background: #E8F4F4;
+	background: #e5efed;
 	margin: 12px 0 0 0;
 	padding: 8px 8px 16px 8px;
 	border: 1px solid #ccc;
@@ -4163,10 +4163,10 @@ span.hidelink {
 	font-size: 0.9em;
 }
 #recent .windowbg2, .windowbg2 {
-	background: /*#E8F2EF;*/#E8F2EF;
+	background: #E8F2EF;
 }
 #recent .windowbg, .windowbg {
-	background: /*#E8F4F4;*/#E8F2EF;
+	background: #E8F2EF;
 }
 #recent .pagesection {
 	padding: 3px 4px;
@@ -4329,64 +4329,64 @@ tr.catbg th:last-child, #show_attachments th:last-child {
 
 /* @todo tempo Colors for locked and sticky topics so we something to look at till this is done :P*/
 .table_grid tr td.stickybg {
-	background: #f2e3d9; /*e8d8cf*/
+	background: #BDDABE; /*e8d8cf*/
 }
 .table_grid tr td.stickybg2 {
-	background: #f2e3d9;
+	background: #BDDABE;
 }
 .table_grid tr td.lockedbg {
-	background: ##E8F2EF /*EAF2F0*/
+	background: #E8F2EF /*EAF2F0*/
 }
 .table_grid tr td.lockedbg2 {
-	background: ##E8F2EF;
+	background: #E8F2EF;
 }
 /* And now those precious little icons, boy are they cute ! */
 .table_grid tr td.stickybg.subject {
-	background: #f2e3d9 url(../images/icons/quick_sticky.png) no-repeat 98% 4px;
+	background: #BDDABE;
 }
 .table_grid tr td.stickybg2.subject {
-	background: #f2e3d9 url(../images/icons/quick_sticky.png) no-repeat 98% 4px;
+	background: #BDDABE;
 }
 .table_grid tr td.locked_sticky.subject, .table_grid tr td.stickybglockedbg.subject {
-	background: #f2e3d9 url(../images/icons/quick_sticky_lock.png) no-repeat 98% 4px;
+	background: #BDDABE;
 }
 .table_grid tr td.locked_sticky2.subject, .table_grid tr td.stickybglockedbg2.subject {
-	background: #f2e3d9 url(../images/icons/quick_sticky_lock.png) no-repeat 98% 4px;
+	background: #BDDABE;
 }
 .table_grid tr td.lockedbg.subject {
-	background: ##E8F2EF url(../images/icons/quick_lock.png) no-repeat 98% 4px;
+	background: #E8F2EF;
 }
 .table_grid tr td.lockedbg2.subject{
-	background: ##E8F2EF url(../images/icons/quick_lock.png) no-repeat 98% 4px;
+	background: #E8F2EF;
 }
 
 /* Search results need some help as well */
 .search_results_posts .lockedbg {
-	background: #E8F2EF url(../images/icons/quick_lock.png) no-repeat 95% 15px;
+	background: #E8F2EF;
 }
 .search_results_posts .stickybg {
-	background: #f2e3d9 url(../images/icons/quick_sticky.png) no-repeat 95% 15px;
+	background: #e6d6c7;
 }
 .search_results_posts .locked_stickybg {
-	background: #f2e3d9 url(../images/icons/quick_sticky_lock.png) no-repeat 95% 15px;
+	background: #e6d6c7;
 }
 
 /* Colors for background of posts requiring approval */
 #forumposts .approvebg, .table_grid td.approvebg {
 	color: #222;
-	background: #ffeaea;
+	background: #e9cfcf;
 }
 #forumposts .approvebg2, .table_grid td.approvebg2 {
 	color: #222;
-	background: #fff2f2;
+	background: #f5e9e9;
 }
 
 /* Color for background of *topics* requiring approval */
 .approvetbg {
 	color: #222;
-	background: #e4a17c;
+	background: #bc9b7d;
 }
 .approvetbg2 {
 	color: #222;
-	background: #f3bd9f;
+	background: #e0ccc1;
 }
