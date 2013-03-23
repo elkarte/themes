@@ -383,7 +383,7 @@ em {
 }
 .bbc_link:hover {
 	text-decoration: none;
-	border-bottom: 1px solid #adc0b4;
+	border-bottom: 1px solid #276966;
 }
 .bbc_size {
 	line-height: 1.4em;
@@ -810,7 +810,7 @@ div.cat_bar, div.title_bar,div.title_barIC {
 	border-radius: 5px;
 }
 div.cat_bar {
-	background: #ADC0B4;
+	background: #276066;
 	border-bottom: 1px solid #777;
 	padding: 0;
 	border-radius: 6px 6px 0 0;
@@ -1077,7 +1077,7 @@ img.sort {
 	line-height: 2.2em;
 	padding: 0 7px;
 	display: block;
-	color: #adc0b4;
+	color: #276066;
 }
 .dropmenu li li a>img {
 	vertical-align: middle;
