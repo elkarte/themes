@@ -206,7 +206,7 @@ div.quick_tasks {
 }
 .action_admin .table_grid th, .action_admin .table_grid .first_th, .action_admin .table_grid .last_th {
 	border-radius: 0;
-	border-top: 2px solid #ff9400;
+	border-top: 2px solid #bf6900;
 	border-bottom: 2px solid #bf6900;
 	padding: 6px 6px 5px 6px;
 	background: #fff;
@@ -232,7 +232,7 @@ div.quick_tasks {
 }
 .action_admin .table_grid .windowbg3 tr:nth-child(odd) td, .action_admin .table_grid .windowbg3 tr:nth-child(even) td {
 	color: #222;
-	background: #cacdd3;
+	background: #cad3cb;
 }
 
 /* Newsletters screen.
@@ -433,7 +433,7 @@ body#chrome  #quick_search .button_submit {
 	border-top: 1px solid #bf6900;
 }
 #ourAnnouncements dt a {
-	color: #bf6900;
+	color: #8a5e25;
 	font-weight: bold;
 	display: block;
 }
