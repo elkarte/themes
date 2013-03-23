@@ -3719,12 +3719,12 @@ span.hidelink {
 	right: 12px;
 }
 #main_grid .buttonlist a {
-	background: #cde7ff url(../images/theme/submit_bg.png) no-repeat;
+	background: #D0F3E0;
 	border: 1px solid #aaa;
 	border-radius: 3px;
 }
 #main_grid .buttonlist a:hover {
-	background: #dceeff url(../images/theme/submit_bg.png) no-repeat 0 -140px;
+	background: #D0F3E0;
 	color: #222;
 }
 
