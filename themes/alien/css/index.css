@@ -1101,7 +1101,7 @@ img.sort {
 .dropmenu li:hover li a, .dropmenu li.sfhover li a {
 	padding: 0 9px;
 	background: none;
-	color: #adc0b4;
+	color: #458171;
 	border: none;
 }
 /* Level 3 submenu wrapper positioning. */
@@ -1115,9 +1115,9 @@ img.sort {
 /* Levels 2 and 3 hover effects. */
 .dropmenu li li:hover, .adm_section .dropmenu li li:hover {
 	background: none;
-	border: 1px solid #cfcfcf;
-	border-top: 1px solid #d4dee6;
-	border-bottom: 1px solid #cbdae6;
+	border: 1px solid #B6B5B5;
+	border-top: 1px solid #D4E6DF;
+	border-bottom: 1px solid #CBE6DF;
 	background: #E1EDE9 url(../images/theme/lower_section.png) 0 0 repeat-x;
 }
 .dropmenu li li:hover>a, .dropmenu li li.sfhover a:focus, .dropmenu li li a:hover, .dropmenu li li a:focus {
@@ -1240,7 +1240,7 @@ img.sort {
 	box-shadow: none;
 }
 .adm_section .dropmenu li li a, .adm_section .dropmenu li:hover li a, .adm_section .dropmenu li.sfhover li a {
-	color: #adc0b4;
+	color: #458171;
 	padding: 0 7px;
 }
 .adm_section .dropmenu li li a:hover {
@@ -1413,7 +1413,7 @@ img.sort {
 }
 #search_form .button_submit:hover {
 	background: #fff;
-	color: #8A5E25;
+	color: #845820;
 	text-decoration: none;
 }
 /* The logo and slogan. */
@@ -1949,12 +1949,12 @@ h4#pollquestion {
 
 /* Poll vote options */
 #poll_options ul.options {
-	border-top: 1px solid #9999aa;
+	border-top: 1px solid #779285;
 	padding: 12px 30px 0 25px;
 	margin: 0 0 12px 0;
 }
 #poll_options div.submitbutton {
-	border-bottom: 1px solid #9999aa;
+	border-bottom: 1px solid #779285;
 	clear: both;
 	padding: 0 0 12px 25px;
 	margin: 0 0 12px 0;
@@ -1962,7 +1962,7 @@ h4#pollquestion {
 
 /* Poll results */
 #poll_options dl.options {
-	border: solid #9999aa;
+	border: solid #779285;
 	border-width: 1px 0;
 	padding: 12px 0 12px 25px;
 	margin: 0 0 12px 0;
@@ -2070,7 +2070,7 @@ div#pollmoderation {
     padding: 6px;
     line-height: 1.5em;
     text-align: center;
-	color: #C06002;
+	color: #AF5A07;
 	font-size: 1.2em;
 	cursor: pointer;
 	font-weight: bold;
@@ -2446,8 +2446,8 @@ ul.quickbuttons li.inline_mod_check {
 }
 .quickbuttons li ul li:hover {
 	border: 1px solid #cfcfcf;
-	border-top: 1px solid #d4dee6;
-	border-bottom: 1px solid #cbdae6;
+	border-top: 1px solid #D4E6DC;
+	border-bottom: 1px solid #CBE6DB;
 	background: #E1EDE9;
 }
 .quickbuttons ul li a, .quickbuttons ul li a:focus {
@@ -3029,7 +3029,7 @@ tr.windowbg td, tr.windowbg2 td, tr.approvebg td, tr.highlight2 td {
 
 .noticebox {
 	color: #666;
-	background: #fff6ca url(../images/profile/warning_moderate.png) 10px 50% no-repeat;
+	background: #FBE9C6 url(../images/profile/warning_moderate.png) 10px 50% no-repeat;
 	text-align: left;
 	border-top: 1px solid #ffd324;
 	border-bottom: 1px solid #ffd324;
@@ -3221,7 +3221,7 @@ dl {
 	background: #fff;
 }
 .activity_stats li div.bar div {
-	background: #6294CE;
+	background: #8AB798;
 	background: #8A7E66;
 	box-shadow: 4px -4px 4px rgba(0,0,0,0.1) inset, 4px 4px 4px rgba(255,255,255,0.3) inset;
 }
@@ -3341,7 +3341,7 @@ img.centericon {
 }
 .ignoreboards a:hover {
 	text-decoration: none;
-	border-bottom: 1px solid #334466;
+	border-bottom: 1px solid #33664C;
 }
 .ignoreboards ul {
 	margin: 0;
@@ -3474,7 +3474,7 @@ dl.stats dd {
 /* Methinks topic links, etc need a little more oomph next to the orange bars. */
 /* Open to suggestions. */
 #stats_left dt a {
-	color: #232f46;
+	color: #23462B;
 }
 .top_row dl.stats dd {
 	background: none; border: none;
@@ -3682,7 +3682,7 @@ dl.addrules dt.floatleft {
 }
 #main_grid .weeklist h4 a:hover {
 	text-decoration: none;
-	border-bottom: 1px solid #adc0b4;
+	border-bottom: 1px solid #458171;
 }
 /* Use the old one true layout trick here. */
 #main_grid .weeklist .windowbg2 {
