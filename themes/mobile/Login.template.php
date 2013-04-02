@@ -1,7 +1,7 @@
 <?php
 /**
- * @name      Dialogo Forum
- * @copyright Dialogo Forum contributors
+ * @name      ElkArte Forum
+ * @copyright ElkArte Forum contributors
  * @license   BSD http://opensource.org/licenses/BSD-3-Clause
  *
  * This software is a derived product, based on:
@@ -333,5 +333,3 @@ function template_resend()
 			<input type="submit" value="', $txt['invalid_activation_resend'], '" class="button_submit" />
 		</form>';
 }
-
-?>
