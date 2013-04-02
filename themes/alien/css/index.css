@@ -1093,7 +1093,7 @@ img.sort {
 	margin-left: 19950px;
 }
 /* Cancel those for hover and/or js access. */
-.dropmenu ul li:hover a:focus, .dropmenu ul li.sfhover a:focus {
+.dropmenu ul li:hover a:focus, .dropmenu ul li.sfhover a:focus, .dropmenu li li a:focus {
 	margin-left: 0;
 	width: auto;
 }
@@ -1137,7 +1137,7 @@ img.sort {
 .dropmenu li li:hover ul, .dropmenu li li.sfhover ul {
 	left: -14px;
 }
-.dropmenu li li.subsections a:after, .adm_section .dropmenu li.subsections a:after{
+.dropmenu li li.subsections a:after, .adm_section .dropmenu li.subsections a:after {
 	position: absolute;
 	top: 0.4em;
 	right: 2px;
@@ -1665,7 +1665,7 @@ ul li.greeting {
 	padding: 8px 0 0 0;
 	width: 5%;
 	min-width: 50px;
-	/*Top aligned is much nicer for the icon. */
+	/* Top aligned is much nicer for the icon. */
 	vertical-align: top;
 	border-left: 1px solid #ddd;
 	text-align: center;
@@ -2065,6 +2065,11 @@ div#pollmoderation {
 	word-break: hyphenate;
 	word-wrap: break-word;
 }
+.poster2 {
+    width: auto;
+	max-width: 25em;
+    font-size: 1em;
+}
 .poster span.name {
     display: block;
     padding: 6px;
@@ -2138,8 +2143,8 @@ div#pollmoderation {
 	padding: 0 10px 0 10px;
 }
 .poster .dropmenu li ul li.report_link, .poster .dropmenu li ul li.issue_warning, .poster .dropmenu li ul li.poster_ip {
-	margin: 0 0 0 0;
-	padding: 0 0 0 0;
+	margin: 0;
+	padding: 0;
 	float: left;
 	width: 100%;
 	font-size: 1.1em;
@@ -2149,6 +2154,13 @@ div#pollmoderation {
 	height: 2px;
 	background: #ccc;
 	box-shadow: 0 -1px 0 #fff inset;
+}
+.poster .dropmenu li ul li.warning a, .poster .dropmenu li ul li.warning img {
+	width: auto;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 4px;
+	line-height: 1.4em;
 }
 .poster .dropmenu li ul li hr {
 	margin: 4px 3px;
@@ -2198,6 +2210,9 @@ div#pollmoderation {
 .poster img {
 	vertical-align: middle;
 }
+.avatar img {
+	border: 0;
+}
 
 /* End nifty new flyout. */
 
@@ -2235,6 +2250,9 @@ div#pollmoderation {
 }
 .groupicon img {
 	padding: 0 3px 0 3px;
+}
+.keyinfo {
+	margin-bottom: 2px;
 }
 .keyinfo h5 {
 	color: #555;
@@ -2356,6 +2374,15 @@ ul.quickbuttons li a.details_button {
 ul.quickbuttons li a.ignore_button {
 	background: url(../images/theme/quickbuttons.png) no-repeat 1px -288px;
 }
+ul.quickbuttons li a.report_button {
+	background: url(../images/theme/quickbuttons.png) no-repeat 1px -312px;
+}
+ul.quickbuttons li a.warn_button {
+	background: url(../images/theme/quickbuttons.png) no-repeat 1px -336px;
+}
+ul.quickbuttons li a.quotetonew_button {
+	background: url(../images/theme/quickbuttons.png) no-repeat 1px -360px;
+}
 ul.quickbuttons li.inline_mod_check {
 	padding: 1px 1px 1px 1px;
 }
@@ -2429,7 +2456,8 @@ ul.quickbuttons li.inline_mod_check {
 	border-left: solid 1px #aaa;
 	border-top: solid 1px #bbb;
 	border-radius: 4px 2px 4px 0;
-	box-shadow: 2px 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 2px 3px 3px rgba(0, 0 ,0, 0.2);
+	white-space: nowrap;
 }
 .quickbuttons li:hover ul, .quickbuttons li.sfhover ul {
 	left: auto;
@@ -2440,7 +2468,7 @@ ul.quickbuttons li.inline_mod_check {
 	background: none;
 	border: none;
 	box-shadow: none;
-	width: 12em;
+	width: 12.5em;
 	border: 1px solid transparent;
 	border-radius: 3px;
 }
@@ -2456,6 +2484,28 @@ ul.quickbuttons li.inline_mod_check {
 	line-height: 2.0em;
 	width: 12em;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+li.quote, .follow_ups li {
+	position: relative;
+	padding: 0 4px;
+	line-height: 2.0em;
+}
+.follow_ups li:first-child {
+	border-radius: 4px;
+	margin-right: 0.75em;
+}
+ul.follow_ups li a, ul.follow_ups li a:hover {
+	padding: 0;
+	white-space: normal;
+}
+ul.follow_ups {
+	float: none;
+	width: auto;
+	margin: 0;
+	padding: 0;
+}
+ul.follow_ups>li {
+	margin-top: -5px;
 }
 /* Note: The next declarations are for keyboard access with js disabled. */
 .quickbuttons ul li a:focus {
@@ -2759,12 +2809,12 @@ ul.post_options li {
 #move_topic dl.settings dd {
 	width: 59%;
 }
-.move_topic {
+.split_topics, .move_topic {
 	width: 710px;
 	margin: auto;
 	text-align: left;
 }
-div.move_topic fieldset {
+div.split_topics fieldset, div.move_topic fieldset {
 	padding: 6px;
 }
 
@@ -3389,9 +3439,17 @@ img.centericon {
 }
 
 /*Issue a warning*/
-#warn_body{
+#warn_body {
 	width: 80%;
 	font-size: 0.9em;
+}
+#warning_text {
+	padding-top: 1pt;
+	width: 100%;
+	z-index: 2;
+	color: black;
+	position: absolute;
+	font-weight: bold;
 }
 
 /* Styles for the statistics center.
@@ -3726,6 +3784,9 @@ span.hidelink {
 #main_grid .buttonlist a:hover {
 	background: #D0F3E0;
 	color: #222;
+}
+table.calendar_table {
+	border-spacing: 1px;
 }
 
 /* Styles for the memberlist section.
@@ -4190,6 +4251,16 @@ span.hidelink {
 }
 .table_grid tr.catbg th.centercol, .table_grid tr.windowbg2 td.centercol, .table_grid tr.windowbg td.centercol, .table_grid tr.highlight2 td.centercol {
 	text-align: center;
+}
+.table_grid tr.catbg th.lefttext, .table_grid tr.windowbg2 td.lefttext, .table_grid tr.windowbg td.lefttext, .table_grid tr.highlight2 td.lefttext {
+	margin-left: 0;
+	margin-right: auto;
+	text-align: left;
+}
+.table_grid tr.catbg th.righttext, .table_grid tr.windowbg2 td.righttext, .table_grid tr.windowbg td.righttext, .table_grid tr.highlight2 td.righttext {
+	margin-left: auto;
+	margin-right: 0;
+	text-align: right;
 }
 #show_attachments th {
 	text-align: left;
