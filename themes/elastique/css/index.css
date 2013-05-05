@@ -515,11 +515,9 @@ div.windowbg, div.windowbg2 {
 /* the page navigation area */
 .pagesection {
 	font-size: 0.9em;
-	padding: 2px 4px;
 	overflow: hidden;
 	margin: 0;
 	clear: both;
-	margin-bottom: 30px !important;
 }
 #main_content_section .pagesection {
 	margin: 4px 0 0 0;
@@ -1309,8 +1307,7 @@ img.sort {
 	position: relative;
 }
 .pagesection .buttonlist  {
-	position: absolute;
-	right: 0;
+	margin-rigt: 5px;
 }
 .pagesection ul.buttonlist_c {
 	position: absolute;
@@ -4576,9 +4573,6 @@ tr.catbg th:last-child, #show_attachments th:last-child {
 	#top_section {
 		padding-bottom: 5px;
 	}
-	.pagesection {
-		margin-bottom: 30px !important;
-	}
 	.dropmenu li
 	{
 		padding: 0;
@@ -4605,10 +4599,28 @@ tr.catbg th:last-child, #show_attachments th:last-child {
 
 @media screen and (max-width: 400px)  
 {
-	#logo {
+	#logo, #topic_icons div p, .optional {
 		display: none;
 	}
+	
 	#guest_form input {
 		width: 50px;
 	}
+	#message_index_jump_to {
+		display: block !important;
+		margin-bottom: 7px;
+	}
+	.buttonlist ul li {
+		font-size: 0.8em !important;
+		margin-left: 3px;
+	}
+	#description_board {
+		display: none;
+	}
+	.pagelinks, .buttonlist {
+		float: none !important;
+		width: 95%;
+	}
+	#main_menu ul li {
+	margin-bottom: 5px;
 }
