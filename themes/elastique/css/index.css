@@ -4595,6 +4595,9 @@ tr.catbg th:last-child, #show_attachments th:last-child {
 		float: none;
 		width: 95%;
 	}
+	.login {
+		width: 95%;
+	}
 }
 
 @media screen and (max-width: 400px)  
