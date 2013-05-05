@@ -92,6 +92,9 @@ function template_html_above()
 		echo '
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />';
 
+	// Tablet or mobile? Force'em to use the click menu variant. 
+	if ($context['browser_body_id'] == 'table' || $context['browser_body_id'] == 'mobile')
+		$context['javascript_vars']['use_click_menu'] = true;
 	// load in any css from mods or themes so they can overwrite if wanted
 	template_css();
 
