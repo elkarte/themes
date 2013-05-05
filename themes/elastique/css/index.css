@@ -4604,4 +4604,7 @@ tr.catbg th:last-child, #show_attachments th:last-child {
 	#logo {
 		display: none;
 	}
+	#guest_form input {
+		width: 50px;
+	}
 }
