@@ -177,7 +177,7 @@ a.new_posts, span.new_posts {
 }
 span.new_posts {
 	display: inline;
-	margin: 0 5px 0 -2px;
+	margin: 0 5px 0 1px;
 	padding: 0 4px 1px 4px;
 	font-size: 9px;
 	font-family: verdana, sans-serif; /* @todo Might add extra fallbacks. Possibly monospace. */
@@ -528,18 +528,28 @@ div.pagesection div.floatright input, div.pagesection div.floatright select {
 .pagelinks {
 	margin: 8px 0 0 0;
 }
+.pagelinks  .pagelink:first-child {
+	border-radius: 4px 0 0 4px;
+	border-left: 1px solid #ccc;
+}
+.pagelinks  .pagelink:last-child {
+	border-radius: 0 4px 4px 0;
+}
+.pagelink {
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 3px 6px;
+	background: #efefef;
+}
 .navPages {
-	padding: 0 1px;
 }
 .next_page, .previous_page {
 	text-transform: capitalize;
-	padding: 0 2px;
+
 }
-.current_page strong {
-	font-size: 1.2em;
-	padding: 0 4px 0 2px;
-	color: #b46100;
-	font-family: verdana, sans-serif;
+.current_page  {
+	color: #ccc;
 }
 /* Next and previous topic links for Display.template.php. */
 /* Give them a bit of extra height for an easier target. */
@@ -1006,9 +1016,6 @@ img.sort {
 	cursor: pointer;
 	background: #fff url(../images/theme/lower_section.png) 0 45% repeat-x;
 	border: 1px solid #ccc;
-	border-right: 1px solid #bbb;
-	border-bottom: 1px solid #aaa;
-	border-radius: 1px;
 	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	padding: 0 10px;
 	margin: 0;
@@ -1065,12 +1072,13 @@ img.sort {
 	padding: 0.5em;
 	font-weight: normal;
 	background: #fff;
-	border: solid 1px #999;
+	 border: solid 1px #999;
 	border-left: solid 1px #bbb;
 	border-top: solid 1px #ccc;
-	border-radius: 2px 7px 0 4px;
+	border-radius: 2px;
 	box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
 }
+
 /* Level 2 link background. */
 .dropmenu li li {
 	margin: 0;
@@ -1198,7 +1206,7 @@ img.sort {
 	padding: 0 10px 1em 0;
 }
 .adm_section .cat_bar {
-	background: #f0f4f7;
+	background: #efefef;
 	border: 1px solid #c8c8c8;
 	border-left: 1px solid #d8d8d8;
 	border-top: 1px solid #e2e2e2;
@@ -1874,10 +1882,6 @@ ul li.greeting {
 	border-top: 1px solid #ccc;
 }
 
-img.new_posts {
-	padding: 0 1px;
-}
-
 .fix_rtl_names {
 	display:inline-block;
 }
@@ -2095,7 +2099,7 @@ div#pollmoderation {
 	float: left;
 	/* Don't set this in em.It will eat too much space if people nead to set large text sizes. */
 	/* Better to just break the few words here, and leave more space for actual topic content. */
-	width: 80px;
+	width: 120px;
 	word-break: hyphenate;
 	word-wrap: break-word;
 }
@@ -2109,7 +2113,7 @@ div#pollmoderation {
 	padding: 6px;
 	line-height: 1.5em;
 	text-align: center;
-	color: #C06002;
+	color: #789644;
 	font-size: 1.2em;
 	cursor: pointer;
 	font-weight: bold;
@@ -2118,7 +2122,7 @@ div#pollmoderation {
 .poster h4, .poster h4 a, .poster li:hover h4 a, .poster h4 a:hover .poster li.sfhover h4 a, .poster h4 a:focus {
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
-	color: #c06002;
+	color: #789644;
 	display: block;
 }
 .poster h4 span {
@@ -2132,6 +2136,7 @@ div#pollmoderation {
 	padding: 0 0 0 0;
 	margin: -8px 0 0 0;
 	float: none;
+	border: none;
 }
 .poster .dropmenu>li, .poster .dropmenu>li:hover, .poster .dropmenu>li.sfhover
 .poster .dropmenu>li h4, .poster .dropmenu>li:hover h4, .poster .dropmenu>li.sfhover h4,
@@ -2264,7 +2269,7 @@ div#pollmoderation {
 /* End nifty new flyout. */
 
 .postarea, .moderatorbar {
-	margin: 0 0 0 95px;
+	margin: 0 0 0 130px;
 }
 .postarea {
 	padding: 5px;
@@ -3084,7 +3089,7 @@ tr.windowbg td, tr.windowbg2 td, tr.approvebg td, tr.highlight2 td {
 }
 
 .errorfile_table {
-	background: #f0f4f7;
+	background: #efefef;
 	border-spacing: 3px;
 	border-collapse: collapse;
 }
@@ -4173,9 +4178,7 @@ table.calendar_table {
 }
 #forumposts .windowbg .poster, #forumposts .windowbg2 .poster,
 #statistics .flow_hidden, #forumposts .approvebg, #forumposts .approvebg2, #personal_messages .windowbg, #personal_messages .windowbg2 {
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	box-shadow: 0 -2px 2px rgba(0,0,0,0.1);
+
 }
 #forumposts .windowbg .postarea {
 	background: #fefefe;
@@ -4483,45 +4486,45 @@ tr.catbg th:last-child, #show_attachments th:last-child {
 
 /* @todo tempo Colors for locked and sticky topics so we something to look at till this is done :P*/
 .table_grid tr td.stickybg {
-	background: #f2e3d9; /*e8d8cf*/
+	background: #e4eada; /*e8d8cf*/
 }
 .table_grid tr td.stickybg2 {
-	background: #f2e3d9;
+	background: #e4eada;
 }
 .table_grid tr td.lockedbg {
-	background: #f0f4f7 /*e7eaef*/
+	background: #eee; /*e7eaef*/
 }
 .table_grid tr td.lockedbg2 {
-	background: #f0f4f7;
+	background: #eee;
 }
 /* And now those precious little icons, boy are they cute ! */
 .table_grid tr td.stickybg.subject {
-	background: #f2e3d9 url(../images/icons/quick_sticky.png) no-repeat 98% 4px;
+	background: #e4eada url(../images/icons/quick_sticky.png) no-repeat 98% 4px;
 }
 .table_grid tr td.stickybg2.subject {
-	background: #f2e3d9 url(../images/icons/quick_sticky.png) no-repeat 98% 4px;
+	background: #e4eada url(../images/icons/quick_sticky.png) no-repeat 98% 4px;
 }
 .table_grid tr td.locked_sticky.subject, .table_grid tr td.stickybglockedbg.subject {
-	background: #f2e3d9 url(../images/icons/quick_sticky_lock.png) no-repeat 98% 4px;
+	background: #e4eada url(../images/icons/quick_sticky_lock.png) no-repeat 98% 4px;
 }
 .table_grid tr td.locked_sticky2.subject, .table_grid tr td.stickybglockedbg2.subject {
-	background: #f2e3d9 url(../images/icons/quick_sticky_lock.png) no-repeat 98% 4px;
+	background: #e4eada url(../images/icons/quick_sticky_lock.png) no-repeat 98% 4px;
 }
 .table_grid tr td.lockedbg.subject {
-	background: #f0f4f7 url(../images/icons/quick_lock.png) no-repeat 98% 4px;
+	background: #eee url(../images/icons/quick_lock.png) no-repeat 98% 4px;
 }
 .table_grid tr td.lockedbg2.subject{
-	background: #f0f4f7 url(../images/icons/quick_lock.png) no-repeat 98% 4px;
+	background: #eee url(../images/icons/quick_lock.png) no-repeat 98% 4px;
 }
 /* Search results need some help as well */
 .search_results_posts .lockedbg {
-	background:  #f0f4f7 url(../images/icons/quick_lock.png) no-repeat 95% 15px;
+	background:  #eee url(../images/icons/quick_lock.png) no-repeat 95% 15px;
 }
 .search_results_posts .stickybg {
-	background: #f2e3d9 url(../images/icons/quick_sticky.png) no-repeat 95% 15px;
+	background: #e4eada url(../images/icons/quick_sticky.png) no-repeat 95% 15px;
 }
 .search_results_posts .locked_stickybg {
-	background:  #f2e3d9 url(../images/icons/quick_sticky_lock.png) no-repeat 95% 15px;
+	background:  #e4eada url(../images/icons/quick_sticky_lock.png) no-repeat 95% 15px;
 }
 
 /* Colors for background of posts requiring approval */
