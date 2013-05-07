@@ -546,7 +546,6 @@ div.pagesection div.floatright input, div.pagesection div.floatright select {
 }
 .next_page, .previous_page {
 	text-transform: capitalize;
-
 }
 .current_page  {
 	color: #ccc;
@@ -1072,13 +1071,12 @@ img.sort {
 	padding: 0.5em;
 	font-weight: normal;
 	background: #fff;
-	 border: solid 1px #999;
+	border: solid 1px #999;
 	border-left: solid 1px #bbb;
 	border-top: solid 1px #ccc;
 	border-radius: 2px;
 	box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
 }
-
 /* Level 2 link background. */
 .dropmenu li li {
 	margin: 0;
