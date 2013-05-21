@@ -630,6 +630,9 @@ div.pagesection div.floatright input, div.pagesection div.floatright select {
 .error {
 	color: red;
 }
+.border_error {
+	border: 1px solid red;
+}
 
 /* Messages that somehow need to attract the attention. */
 .alert {
@@ -880,7 +883,7 @@ table.table_list a.collapse {
 .table_grid tr.catbg th {
 	text-align: left;
 }
-.table_grid tr.catbg th.centercol, .table_grid tr.windowbg2 td.centercol, .table_grid tr.windowbg td.centercol, .table_grid tr.highlight2 td.centercol  {
+.table_grid tr.catbg th.centertext, .table_grid tr.windowbg2 td.centertext, .table_grid tr.windowbg td.centertext, .table_grid tr.highlight2 td.centertext  {
 	text-align: center;
 }
 tr.catbg th.first_th {
@@ -1100,7 +1103,7 @@ img.sort {
 	position: absolute;
 	top: 2.25em;
 	left: -9999px;
-	width: 17.5em;
+	width: 18.5em;
 	border: 1px solid #c9c9c9;
 	border-radius: 2px 4px 4px 4px;
 	box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255,255,255, 0.8);
@@ -1949,6 +1952,9 @@ p#whoisviewing {
 .poster li.warning a img {
 	vertical-align: bottom;
 	padding: 0 2px;
+}
+.avatar img {
+	border: 0;
 }
 .messageicon {
 	float: left;
@@ -3134,6 +3140,14 @@ dl.stats dd {
 	border-right: 1px solid #fff;
 	border-bottom: 1px solid #fff;
 }
+.postsbar {
+	width: 110px;
+	text-align: right;
+	border-radius: 4px;
+	line-height: 1.4em;
+	margin: 1px 0;
+	min-height: 1.4em;
+}
 tr.windowbg2 th.stats_month {
 	width: 25%;
 	padding: 0 2em;
@@ -3209,7 +3223,7 @@ dl.addrules dt.floatleft {
 ------------------------------------------------- */
 
 #calendar {
-	overflow: hidden;
+	overflow: auto;
 }
 
 /* Used to indicate the current day in the grid. */
@@ -3218,11 +3232,15 @@ dl.addrules dt.floatleft {
 	border: 1px solid #bbb;
 	box-shadow: 0 2px 5px rgba(0,0,0,0.05) inset;
 }
-#month_grid {
-	padding: 0 15px 0 0;
-	width: 215px;
+#month_grid
+{
+	width: 200px;
 	text-align: center;
 	float: left;
+}
+#main_grid
+{
+	margin: 0 0 0 220px;
 }
 #month_grid div.cat_bar {
 	border-radius: 5px 5px 0 0;
