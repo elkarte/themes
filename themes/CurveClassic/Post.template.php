@@ -387,7 +387,7 @@ function template_main()
 							<img id="postDraftExpand" class="panel_toggle" style="display: none;" src="', $settings['images_url'], '/', empty($context['minmax_preferences']['draft']) ? 'collapse' : 'expand', '.png" alt="-" /> <strong><a href="#" id="postDraftExpandLink">', $txt['draft_load'], '</a></strong>
 						</h4>
 					</div>
-					<div id="postDraftOptions" class="load_drafts padding"', empty($context['minmax_preferences']['draft']) ? '' : ' style="display: none;"', '>>
+					<div id="postDraftOptions" class="load_drafts padding"', empty($context['minmax_preferences']['draft']) ? '' : ' style="display: none;"', '>
 						<dl class="settings">
 							<dt><strong>', $txt['subject'], '</strong></dt>
 							<dd><strong>', $txt['draft_saved_on'], '</strong></dd>';
@@ -633,21 +633,18 @@ function template_spellcheck()
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/index', $context['theme_variant'], '.css?alp21" />
 		<style type="text/css">
-			body, td
-			{
+			body, td {
 				font-size: small;
 				margin: 0;
 				background: #f0f0f0;
 				color: #000;
 				padding: 10px;
 			}
-			.highlight
-			{
+			.highlight {
 				color: red;
 				font-weight: bold;
 			}
-			#spellview
-			{
+			#spellview {
 				border-style: outset;
 				border: 1px solid black;
 				padding: 5px;

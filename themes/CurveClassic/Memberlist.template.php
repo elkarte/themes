@@ -51,7 +51,7 @@ function template_main()
 		// This is a selected column, so underline it or some such.
 		if ($column['selected'])
 			echo '
-					<th scope="col" class="', isset($column['class']) ? ' ' . $column['class'] : '', '" style="width: auto;"' . (isset($column['colspan']) ? ' colspan="' . $column['colspan'] . '"' : '') . ' nowrap="nowrap">
+					<th scope="col" class="', isset($column['class']) ? ' ' . $column['class'] : '', '" style="width: auto;white-space: nowrap"' . (isset($column['colspan']) ? ' colspan="' . $column['colspan'] . '"' : '') . '>
 						<a href="' . $column['href'] . '" rel="nofollow">' . $column['label'] . '</a><img class="sort" src="' . $settings['images_url'] . '/sort_' . $context['sort_direction'] . '.png" alt="" /></th>';
 		// This is just some column... show the link and be done with it.
 		else
@@ -92,17 +92,29 @@ function template_main()
 		if (!isset($context['disabled_fields']['posts']))
 		{
 			echo '
-					<td style="white-space: nowrap" width="15">', $member['posts'], '</td>
-					<td class="statsbar" width="120">';
+					<td class="statsbar">';
 
-			if (!empty($member['post_percent']))
+			// show a relative bar graph of posts
+			if (isset($member['post_percent']))
 				echo '
-						<div class="bar" style="width: ', $member['post_percent'] + 4, 'px;">
-							<div style="width: ', $member['post_percent'], 'px;"></div>
+						<div class="postsbar">
+							<div class="bar" style="width: ', $member['post_percent'] * 0.6, '%;"></div>
+							<span class="righttext" style="white-space: nowrap;">', $member['posts'], '</span>
 						</div>';
+			else
+				echo '
+						<span class="righttext" style="white-space: nowrap;">', $member['posts'], '</span>';
 
 			echo '
 					</td>';
+		}
+
+		// Any custom fields on display?
+		if (!empty($context['custom_profile_fields']['columns']))
+		{
+			foreach ($context['custom_profile_fields']['columns'] as $key => $column)
+				echo '
+					<td class="lefttext">', $member['options'][substr($key, 5)], '</td>';
 		}
 
 		echo '
