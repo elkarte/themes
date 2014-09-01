@@ -1,0 +1,5 @@
+1. You are allowed to edit any parts of theme, without authors knowledge,
+     but you can't redistribute it, share it or sell it.
+2. You are not allowed to change authors Copyright.
+3. You cannot copy any parts of this theme to other ones, including
+     code and images.
