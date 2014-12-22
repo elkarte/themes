@@ -25,5 +25,7 @@ but with a new color scheme and removal of soft edges.
 ## Installation:
 {% include install_std.MD %}
 
-### License:
+## License:
 {% include license.MD param="bsd" %}
+
+## Screen Shots:

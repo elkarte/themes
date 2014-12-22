@@ -24,5 +24,7 @@ A theme to give a nostalgic curve look
 ## Installation:
 Use the variant file in your besocial theme
 
-### License:
+## License:
 {% include license.MD param="bsd" %}
+
+## Screen Shots:

@@ -1,16 +1,16 @@
 {% capture cat %}{{ page.category | downcase }}{% endcapture %}
 {% include pretty_cat.html %}
-<!-- Just note these are 3rd party, use at own peril -->
+<!-- Just note these are 3rd party -->
 <div class="panel panel-danger alert">
 	<div class="panel-body bg-warning">
 		<i class="glyphicon glyphicon-info-sign text-warning" style="font-size: 1.5em" aria-hidden="true"></i>
-		This is a community contributed addon, it has not been tested nor code reviewed.
+		This is a community contributed theme, it has not been tested nor code reviewed.
 	</div>
 </div>
 <!-- Most recent from same category -->
 <div class="list-group">
 	<a href="#" class="list-group-item disabled">
-		Other <u>{{ cat }}</u> Addons
+		More <u>{{ cat }}</u> Themes
 	</a>
 	{% for category in site.categories %}
 		{% if category[0] == page.category %}
@@ -34,7 +34,7 @@
 <!-- Others from the same author -->
 <div class="list-group">
 	<a href="#" class="list-group-item disabled">
-		More addons from <u>{{ page.author }}</u>
+		More themes by <u>{{ page.author }}</u>
 	</a>
 	{% assign authors = site.posts | group_by: "author" %}
 	{% for aposts in authors %}

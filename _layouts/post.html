@@ -6,14 +6,12 @@
             {% include sidebar_details.html %}
         </div>
         <div class="col-md-9">
-			<div class="article">
-				<div class="well">
-					<h2>
-						<a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
-					</h2>
-					<p>
-						<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>Last Update: {{ page.date | date: "%b %-d, %Y" }}
-					</p>
+			<div class="panel panel-info"> 
+				<div class="panel-heading well well-sm">
+					<h2 class="panel-title"><a class="h2" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+				</div>
+				<div class="panel-body">
+					<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>Last Update: {{ page.date | date: "%b %-d, %Y" }}
 					<!-- Site Comments header if enabled -->
 					{% if site.comments == true and page.comments == true and site.disqus != '' %}
 					<p class="author"><a href="#disqus_thread">Comments</a></p>
@@ -24,6 +22,7 @@
 					</div>
 					<!-- If there are images, here is where they go in a nice grid -->
 					{% if page.images %}
+					<hr>
 					<div class="container-fluid">
 						<div class="row">
 						{% for image_hash in page.images %}
