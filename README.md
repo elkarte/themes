@@ -1,7 +1,7 @@
 ##Introduction
 You finished your theme and now want to add it to the [Theme Site](http://themes.elkarte.net), awesome!  
   
-To do so you need to make a PR to the elkarte/themes repo, the how to fork a repo, make a local copy, apply your changes, and submit the PR are not part of this guide. There are many guides on how to do this and it all depends on what tools you have chosen. This help assumes you know how to make a PR.
+To do so you need to make a PR to the elkarte/themes repo to the gh-pages branch.  The how to fork a repo, make a local copy, apply your changes, and submit the PR are not part of this guide. There are many guides on how to do this and it all depends on what tools you have chosen. This help assumes you know how to make a PR.
   
 To add your theme to the listing, you need to commit just a single file under the _posts directory. The file must follow the naming convention of YYYY-MM-DD-Theme Name.  The date should be the initial release date of your theme, that date is only used to create the permalink to the file.  
   
