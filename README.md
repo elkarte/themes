@@ -100,9 +100,9 @@ Two helper templates are provided, one is the generic theme installation instruc
 ```
 
 For the license template use the following with a param of
-    * CC BY 4.0, CC BY ND 4.0, CC BY NC ND 4.0, CC BY SA 4.0, CC BY NC SA 4.0, CC BY NC 4.0, BSD, BSD 2, BSD 3
+* CC BY 4.0, CC BY ND 4.0, CC BY NC ND 4.0, CC BY SA 4.0, CC BY NC SA 4.0, CC BY NC 4.0, BSD, BSD 2, BSD 3
 If you use a different license add your own block or make a PR to have it added to license.MD in the _includes directory
 ```
 ### License:  
-{% include license.MD param="MPL 1.1"%} 
+{% include license.MD param="CC BY 4.0"%} 
 ```
