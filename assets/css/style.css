@@ -47,6 +47,10 @@ pre.prettyprint {
 	position: absolute;
 	margin: -5px 0 0 20px;
 }
+.thumbnail {
+	max-height: 200px;
+	overflow: hidden;
+}
 .dl-horizontal dt {
 	width: 100px;
 }
