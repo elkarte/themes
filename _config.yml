@@ -8,8 +8,8 @@ description: Themes to customize the way your forum looks and feels.
 
 # baseurl will often be '', but for a project page on gh-pages, it needs to
 # be the project name.
-baseurl: 'http://spuds.github.io/themes'
-#baseurl: 'http://themes.elkarte.net'
+#baseurl: 'http://spuds.github.io/themes'
+baseurl: 'http://themes.elkarte.net'
 #baseurl: ''
 
 # This can be '' to hide the Github nav button
