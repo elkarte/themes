@@ -1,0 +1,16 @@
+{% case cat %}
+	{% when 'dark' %}
+	<i class="glyphicon glyphicon-stop text-primary" aria-hidden="true"></i>
+	{% when 'minimal' %}
+	<i class="glyphicon glyphicon-unchecked text-primary" aria-hidden="true"></i>
+	{% when 'variant' %}
+	<i class="glyphicon glyphicon-transfer text-primary" aria-hidden="true"></i>
+	{% when 'mimic' %}
+	<i class="glyphicon glyphicon-eye-open text-primary" aria-hidden="true"></i>
+	{% when 'creative' %}
+	<i class="glyphicon glyphicon-send text-primary" aria-hidden="true"></i>
+	{% when 'professional' %}
+	<i class="glyphicon glyphicon-globe text-primary" aria-hidden="true"></i>
+	{% else %}
+	<i class="glyphicon glyphicon-random text-primary" aria-hidden="true"></i>
+{% endcase %}

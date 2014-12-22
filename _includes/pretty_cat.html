@@ -1,0 +1,16 @@
+{% case cat %}
+	{% when 'dark' %}
+	{% assign cat = 'Dark' %}
+	{% when 'minimal' %}
+	{% assign cat = 'Minimalist' %}
+	{% when 'variant' %}
+	{% assign cat = 'ElkArte Variant' %}
+	{% when 'mimic' %}
+	{% assign cat = 'Look-ALike Theme' %}
+	{% when 'creative' %}
+	{% assign cat = 'Creative' %}
+	{% when 'professional' %}
+	{% assign cat = 'Professional' %}
+	{% else %}
+	{% assign cat = 'Other' %}
+{% endcase %}
