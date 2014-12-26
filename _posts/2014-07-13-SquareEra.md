@@ -12,7 +12,7 @@ elkversion: 1.0
 support: http://elkartestudio.com/index.php?topic=4
 author: CrimeS
 thumbnail: http://img.liczniki.org/20140713/My_Community___Index-1405288796.png
-download: https://github.com/CrimeS/SquareEra-ElkArte/releases/download/1.1/SquareEra_1.0.zip
+download: https://github.com/CrimeS/SquareEra-ElkArte/releases/download/1.3/SquareEra_1.0.zip
 demo:
 images:
   - one: http://img.liczniki.org/20140713/My_Community___Index-1405288796.png
