@@ -3,7 +3,7 @@ layout: post
 title: "SquareEra"
 category: variant
 color:
-date: 2014-09-11
+date: 2014-12-23
 comments: false
 short: "A theme with no rounded edges, hence its name SquareEra"
 license: bsd
@@ -21,6 +21,8 @@ images:
 ## Introduction:
 A theme with no rounded edges, which makes it edgy :D  Its based off the BeSocial theme from Elkarte 
 but with a new color scheme and removal of soft edges.
+
+Updated for 1.0.2
 
 ## Installation:
 {% include install_std.MD %}
