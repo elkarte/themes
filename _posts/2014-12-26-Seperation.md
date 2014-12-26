@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Border World"
-category: mimic
+title: "Separation"
+category: creative
 color: light
 date: 2014-12-03
 comments: false
