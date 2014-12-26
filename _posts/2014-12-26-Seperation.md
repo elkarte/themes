@@ -3,7 +3,7 @@ layout: post
 title: "Separation"
 category: creative
 color: light
-date: 2014-12-03
+date: 2014-12-26
 comments: false
 short: "Theme done in blue and white with custom message index"
 license: CC BY 4.0
