@@ -22,7 +22,7 @@ images:
 A theme to give a nostalgic curve look
 
 ## Installation:
-Use the variant file in your besocial theme
+Simply copy the custom css file to your ElkArte forum folder under themes\default\css\_besocial\
 
 ## License:
 {% include license.MD param="MPL" %}
