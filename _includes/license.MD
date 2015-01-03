@@ -16,7 +16,9 @@
 	{% when 'BSD' or 'BSD3' %}
 This ElkArte Addon is subject to the terms of the BSD 3-Clause Simplified (the "License"). You can obtain a copy of the License at http://opensource.org/licenses/BSD-3-Clause
 	{% when 'BSD2' %}
-This ElkArte Addon is subject to the terms of the The BSD 2-Clause License (the "License"). You can obtain a copy of the License at http://opensource.org/licenses/BSD-2-Clause
+This ElkArte Addon is subject to the terms of the BSD 2-Clause License (the "License"). You can obtain a copy of the License at http://opensource.org/licenses/BSD-2-Clause
+	{% when 'MPL' %}
+This ElkArte Addon is subject to the terms of the Mozilla Public License 2.0 (the "License"). You can obtain a copy of the License at http://opensource.org/licenses/MPL-2.0
 	{% else %}
 Unknown
 {% endcase %}
