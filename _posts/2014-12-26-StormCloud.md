@@ -12,8 +12,8 @@ elkversion: 1.0
 support: http://www.elkarte.net/community/index.php?topic=2652
 author: spuds
 thumbnail: https://raw.githubusercontent.com/Spuds/Elk_Theme_StormCloud/master/sample_images/boardindex.jpg
-download: https://github.com/Spuds/Elk_Theme_StormCloud/archive/master.zip
-demo: http://themes.spudsdesign.com/?theme=8
+download: https://github.com/Spuds/Elk_Theme_StormCloud/releases/download/0.0.1/elk_theme_storm_cloud.zip
+demo: http://themes.spudsdesign.com/?theme=2
 images:
   - one: https://raw.githubusercontent.com/Spuds/Elk_Theme_StormCloud/master/sample_images/boardindex.jpg
   - two: https://raw.githubusercontent.com/Spuds/Elk_Theme_StormCloud/master/sample_images/messages.jpg
