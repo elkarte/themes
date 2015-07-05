@@ -3,7 +3,7 @@ layout: post
 title: "Blue Elk" 
 category: mimic 
 color: light
-date: YYYY-MM-DD 
+date: 2015-07-04 
 comments: false 
 short: "A modified Blue version of Be Social" 
 license: BSD 3 
