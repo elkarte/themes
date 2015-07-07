@@ -1,0 +1,27 @@
+--- 
+layout: post 
+title: "FaceIt" 
+category: mimic 
+color: light
+date: 2015-07-07
+comments: false 
+short: "FaceIt is a derivative of ElkArte BeSocial variant." 
+license: BSD
+version: 1.0.0 
+elkversion: 1.0 
+support: http://elkarte.sch.my 
+demo: http://x-mans.sch.my 
+author: Ahmad Rasyid Ismail "ahrasis" ahrasis@gmail.com
+thumbnail: https://cloud.githubusercontent.com/assets/2795588/8537542/0feb6510-2493-11e5-8b17-e4bccbca0432.png
+download: https://github.com/ahrasis/FaceIt/archive/FaceIt100.zip 
+images: 
+  - https://cloud.githubusercontent.com/assets/2795588/8537542/0feb6510-2493-11e5-8b17-e4bccbca0432.png
+--- 
+
+A theme for ElkArte 1.0 based on BeSocial variant. Combination of both blue and green can be seen in the theme.
+
+## Installation: 
+{% include install_std.MD %} 
+
+## License: 
+{% include license.MD param="BSD 3"%}
