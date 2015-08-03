@@ -13,7 +13,7 @@ support: http://www.elkarte.net/community/index.php?topic=2017.0
 author: spuds
 thumbnail: http://www.elkarte.net/community/index.php?action=dlattach;topic=2017.0;attach=1472;image
 download: http://www.elkarte.net/community/index.php?action=dlattach;topic=2017.0;attach=1926
-demo: http://themes.spudsdesign.com/?theme=2
+demo: http://themes.spudsdesign.com/?theme=7
 images:
   - one: http://www.elkarte.net/community/index.php?action=dlattach;topic=2017.0;attach=1472;image
 ---
