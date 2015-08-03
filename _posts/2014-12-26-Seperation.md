@@ -13,7 +13,7 @@ support: http://www.elkarte.net/community/index.php?topic=2343.0
 author: spuds
 thumbnail: https://raw.githubusercontent.com/Spuds/Elk_Theme_Separation/master/sample_images/collapsed.jpg
 download: https://github.com/Spuds/Elk_Theme_Separation/archive/master.zip
-demo: http://themes.spudsdesign.com/?theme=7
+demo: http://themes.spudsdesign.com/?theme=4
 images:
   - one: https://raw.githubusercontent.com/Spuds/Elk_Theme_Separation/master/sample_images/boadindex.jpg
   - two: https://raw.githubusercontent.com/Spuds/Elk_Theme_Separation/master/sample_images/collapsed.jpg
