@@ -66,7 +66,12 @@ layout: default
 			</div>
 			{% endif %}
 			<a href="{{ site.baseurl}}{{ post.url }}" class="btn btn-info btn-block"><i class="glyphicon glyphicon-info-sign pull-left"></i> Details</a>
+			{% if post.download and post.download != '' %}
 			<a href="{{ post.download }}" class="btn btn-info btn-block"><i class="glyphicon glyphicon-save pull-left"></i> Download</a>
+			{% endif %}
+			{% if post.download11 and post.download11 != '' %}
+			<a href="{{ post.download11 }}" class="btn btn-info btn-block"><i class="glyphicon glyphicon-fire pull-left text-danger"></i> Download (Elk v1.1)</a>
+			{% endif %}
 			{% if post.support and post.support != '' %}
 			<a href="{{ post.support }}" class="btn btn-info btn-block"><i class="glyphicon glyphicon-bullhorn pull-left"></i> Support</a>
 			{% endif %}
