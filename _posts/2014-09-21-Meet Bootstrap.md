@@ -9,13 +9,13 @@ short: "A bootstrap theme [WIP]"
 license: BSD
 version: 1.0
 elkversion: 1.0
-support: http://www.elkarte.net/community/index.php?topic=2049.0
+support: https://www.elkarte.net/community/index.php?topic=2049.0
 author: meetdilip
-thumbnail: http://www.elkarte.net/community/index.php?action=dlattach;topic=2049.0;attach=1554;image
-download: http://www.elkarte.net/community/index.php?action=dlattach;topic=2049.0;attach=1553
+thumbnail: https://www.elkarte.net/community/index.php?action=dlattach;topic=2049.0;attach=1554;image
+download: https://www.elkarte.net/community/index.php?action=dlattach;topic=2049.0;attach=1553
 demo:
 images:
-  - one: http://www.elkarte.net/community/index.php?action=dlattach;topic=2049.0;attach=1554;image
+  - one: https://www.elkarte.net/community/index.php?action=dlattach;topic=2049.0;attach=1554;image
 ---
 
 ## Introduction:

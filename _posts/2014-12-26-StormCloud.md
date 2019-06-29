@@ -9,7 +9,7 @@ short: "Theme done in grey/blue colors with custom message index and sidebar inf
 license: CC BY 4.0
 version: 1.0.1
 elkversion: 1.0
-support: http://www.elkarte.net/community/index.php?topic=2652
+support: https://www.elkarte.net/community/index.php?topic=2652
 author: spuds
 thumbnail: https://raw.githubusercontent.com/Spuds/Elk_Theme_StormCloud/master/sample_images/boardindex.jpg
 download: https://github.com/Spuds/Elk_Theme_StormCloud/releases/download/1.0.1/elk_theme_storm_cloud.zip
