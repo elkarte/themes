@@ -69,8 +69,11 @@ layout: default
 			{% if post.download and post.download != '' %}
 			<a href="{{ post.download }}" class="btn btn-info btn-block"><i class="glyphicon glyphicon-save pull-left"></i> Download</a>
 			{% endif %}
+			{% if post.download10 and post.download10 != '' %}
+			<a href="{{ post.download10 }}" class="btn btn-info btn-block"><i class="glyphicon glyphicon-save pull-left"></i> Download (Elk v1.0)</a>
+			{% endif %}
 			{% if post.download11 and post.download11 != '' %}
-			<a href="{{ post.download11 }}" class="btn btn-info btn-block"><i class="glyphicon glyphicon-fire pull-left text-danger"></i> Download (Elk v1.1)</a>
+			<a href="{{ post.download11 }}" class="btn btn-info btn-block"><i class="glyphicon glyphicon-save pull-left"></i> Download (Elk v1.1)</a>
 			{% endif %}
 			{% if post.support and post.support != '' %}
 			<a href="{{ post.support }}" class="btn btn-info btn-block"><i class="glyphicon glyphicon-bullhorn pull-left"></i> Support</a>

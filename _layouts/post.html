@@ -47,9 +47,17 @@
 						</div>
 					</div>
 					{% endif %}
-					<!-- The download button! -->
+					<!-- The download button(s) and accomplices! -->
 					<div class="text-center">
+						{% if page.download and page.download != '' %}
 						<a href="{{ page.download }}" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-save"></i> Download</a>
+						{% endif %}
+						{% if page.download10 and page.download10 != '' %}
+						<a href="{{ page.download10 }}" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-save"></i> Download (Elk v1.0)</a>
+						{% endif %}
+						{% if page.download11 and page.download11 != '' %}
+						<a href="{{ page.download11 }}" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-save"></i> Download (Elk v1.1)</a>
+						{% endif %}
 						{% if page.support and page.support != '' %}
 						<a href="{{ page.support }}" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-bullhorn"></i> Support</a>
 						{% endif %}
