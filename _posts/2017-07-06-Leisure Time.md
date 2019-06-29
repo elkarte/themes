@@ -9,12 +9,12 @@ short: "Theme done in grey/blue with custom message and board index"
 license: CC BY 4.0
 version: 1.0
 elkversion: 1.0
-support: https://www.elkarte.net/community/index.php?topic=2343.0
+support: https://www.elkarte.net/community/index.php?topic=4561.0
 author: spuds
 thumbnail: https://raw.githubusercontent.com/Spuds/Elk_Theme_Leisure/master/sample_images/topiclisting.jpg
 download10: https://github.com/Spuds/Elk_Theme_Leisure/archive/master.zip
 download11: https://github.com/Spuds/Elk_Theme_Leisure/archive/1.1.zip
-demo: http://themes.spudsdesign.com/?theme=9
+demo: http://themes.spudsdesign.com/?theme=10
 images:
   - one: https://raw.githubusercontent.com/Spuds/Elk_Theme_Leisure/master/sample_images/boardindex.jpg
   - two: https://raw.githubusercontent.com/Spuds/Elk_Theme_Leisure/master/sample_images/message.jpg
