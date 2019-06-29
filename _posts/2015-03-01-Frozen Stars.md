@@ -9,7 +9,7 @@ short: "A minimalistic theme with a cold green color"
 license: MPL
 version: 1.0
 elkversion: 1.0
-support: http://www.elkarte.net/community/index.php?topic=1103.0
+support: https://www.elkarte.net/community/index.php?topic=1103.0
 author: TE
 thumbnail: https://raw.githubusercontent.com/eurich/ElkCustomCSS/master/sample_pics/frozen_stars_thumb.png
 download: https://raw.githubusercontent.com/eurich/ElkCustomCSS/master/FrozenStars/custom_besocial.css
