@@ -3,7 +3,7 @@ layout: post
 title: "Leisure Time"
 category: creative
 color: light
-date: 2017-07-06
+date: 2019-06-29
 comments: false
 short: "Theme done in grey/blue with custom message and board index"
 license: CC BY 4.0
@@ -13,7 +13,7 @@ support: https://www.elkarte.net/community/index.php?topic=4561.0
 author: spuds
 thumbnail: https://raw.githubusercontent.com/Spuds/Elk_Theme_Leisure/master/sample_images/topiclisting.jpg
 download10: https://github.com/Spuds/Elk_Theme_Leisure/archive/master.zip
-download11: https://github.com/Spuds/Elk_Theme_Leisure/archive/1.1.zip
+download11: https://github.com/Spuds/Elk_Theme_Leisure/releases/download/V1.1/elk_theme_leisure_11.zip
 demo: http://themes.spudsdesign.com/?theme=10
 images:
   - one: https://raw.githubusercontent.com/Spuds/Elk_Theme_Leisure/master/sample_images/boardindex.jpg
