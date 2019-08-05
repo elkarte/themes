@@ -3,7 +3,7 @@ layout: post
 title: "Separation"
 category: creative
 color: light
-date: 2017-03-05
+date: 2019-08-04
 comments: false
 short: "Theme done in blue and white with custom message index"
 license: CC BY 4.0
@@ -13,6 +13,7 @@ support: https://www.elkarte.net/community/index.php?topic=2343.0
 author: spuds
 thumbnail: https://raw.githubusercontent.com/Spuds/Elk_Theme_Separation/master/sample_images/collapsed.jpg
 download: https://github.com/Spuds/Elk_Theme_Separation/releases/download/V1.0.0/elk_theme_separation.zip
+download11: https://github.com/Spuds/Elk_Theme_Separation/releases/download/V1.1/elk_theme_separation_11.zip
 demo: http://themes.spudsdesign.com/?theme=4
 images:
   - one: https://raw.githubusercontent.com/Spuds/Elk_Theme_Separation/master/sample_images/boadindex.jpg
