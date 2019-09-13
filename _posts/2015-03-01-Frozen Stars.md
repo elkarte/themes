@@ -25,8 +25,9 @@ A theme to give a cold green minimalistic look.
 ## Installation:
 You do *not* install this through the admin panel, but instead do the following.
 
-  - Simply copy the custom_besocial.css file to your ElkArte forum folder under themes\default\css\_besocial\
-  - If installing this for 1.1, in addition to the above, you will need to edit themes\default\index_template.php file and change the 'require_font-awesome' settings to true.
+  - Select the download link for your versoin of ElkArte, you will get a single custom_besocial.css file
+  - Copy that custom_besocial.css file to your ElkArte forum folder under themes\default\css\_besocial
+  - If installing this for 1.1, in addition to the above, you will need to edit  your themes\default\index_template.php file and change the 'require_font-awesome' setting to true.
 
 ## License:
 {% include license.MD param="MPL" %}
