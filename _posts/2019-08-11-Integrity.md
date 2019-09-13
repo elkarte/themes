@@ -14,7 +14,7 @@ author: spuds
 thumbnail: https://raw.githubusercontent.com/Spuds/Elk_Theme_Integrity/master/sample_images/boardindex.jpg
 download10: https://github.com/Spuds/Elk_Theme_Integrity/releases/download/V1.0/elk_theme_integrity.zip
 download11: https://github.com/Spuds/Elk_Theme_Integrity/releases/download/V1.1/elk_theme_integrity_11.zip
-demo: http://themes.spudsdesign.com/?theme=10
+demo: http://themes.spudsdesign.com/?theme=2
 images:
   - one: https://raw.githubusercontent.com/Spuds/Elk_Theme_Integrity/master/sample_images/boardindex.jpg
   - two: https://raw.githubusercontent.com/Spuds/Elk_Theme_Integrity/master/sample_images/message index.jpg
