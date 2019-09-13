@@ -14,7 +14,7 @@ author: spuds
 thumbnail: https://raw.githubusercontent.com/Spuds/Elk_Theme_Leisure/master/sample_images/topiclisting.jpg
 download10: https://github.com/Spuds/Elk_Theme_Leisure/archive/master.zip
 download11: https://github.com/Spuds/Elk_Theme_Leisure/releases/download/V1.1/elk_theme_leisure_11.zip
-demo: http://themes.spudsdesign.com/?theme=10
+demo: http://themes.spudsdesign.com/?theme=3
 images:
   - one: https://raw.githubusercontent.com/Spuds/Elk_Theme_Leisure/master/sample_images/boardindex.jpg
   - two: https://raw.githubusercontent.com/Spuds/Elk_Theme_Leisure/master/sample_images/message.jpg
