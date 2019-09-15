@@ -12,8 +12,8 @@ elkversion: 1.0
 support: https://www.elkarte.net/community/index.php?topic=3682.0
 author: Crip
 thumbnail: https://www.elkarte.net/community/index.php?action=dlattach;topic=3682.0;attach=3716;image
-download10: https://github.com/interlab/elk-theme-mostly-blue/archive/v1.0.zip
-download11: https://github.com/interlab/elk-theme-mostly-blue/archive/v1.1.zip
+download10: https://github.com/interlab/elk-theme-mostly-blue/releases/download/v1.0/mostly-blue.zip
+download11: https://github.com/interlab/elk-theme-mostly-blue/releases/download/v1.1/mostly-blue.zip
 images:
   - one: https://www.elkarte.net/community/index.php?action=dlattach;topic=3682.0;attach=3716;image
   - two: https://www.elkarte.net/community/index.php?action=dlattach;topic=3682.0;attach=3718;image
