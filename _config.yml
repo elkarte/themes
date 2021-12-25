@@ -8,8 +8,8 @@ description: Themes to customize the way your forum looks and feels.
 
 # baseurl will often be '', but for a project page on gh-pages, it needs to
 # be the project name.
-baseurl: 'https://themes.elkarte.net'
-#baseurl: ''
+#baseurl: 'https://themes.elkarte.net'
+baseurl: 'https://elkarte.github.io/themes/'
 
 # This can be '' to hide the Github nav button
 github: 'elkarte/themes'
