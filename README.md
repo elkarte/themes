@@ -1,5 +1,5 @@
 ## Introduction
-You finished your theme and now want to add it to the [Theme Site](http://themes.elkarte.net), awesome!  
+You finished your theme and now want to add it to the [Theme Site](https://elkarte.github.io/themes/), awesome!  
   
 To do so you need to make a PR to the elkarte/themes repo to the gh-pages branch.  The how to fork a repo, make a local copy, apply your changes, and submit the PR are not part of this guide. There are many guides on how to do this and it all depends on what tools you have chosen. This help assumes you know how to make a PR.
   
