@@ -1,4 +1,4 @@
-##Introduction
+## Introduction
 You finished your theme and now want to add it to the [Theme Site](http://themes.elkarte.net), awesome!  
   
 To do so you need to make a PR to the elkarte/themes repo to the gh-pages branch.  The how to fork a repo, make a local copy, apply your changes, and submit the PR are not part of this guide. There are many guides on how to do this and it all depends on what tools you have chosen. This help assumes you know how to make a PR.
@@ -14,12 +14,12 @@ front matter
 detailed description  
 ``` 
 
-###Front Matter
+### Front Matter
 The front matter is what makes everything cool happen. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Meaning the information contained between the --- & --- tags is in YAML format and is specially processed by Jekyll.   
 
 What the frig is YAML?, I don't want to learn YAML!, Good neither did I and you don't have either, just follow along.  
   
-###Example file with front matter
+### Example file with front matter
 ```
 ---  
 layout: post  
@@ -50,7 +50,7 @@ Markdown text
 ## License:  
 {% include license.MD param="BSD"%}  
 ```
-###Front Matter Details
+### Front Matter Details
 * layout: post  
 	* The name following layout is a template file to use when the page is rendered. Currently there is only one choice and that is post. Others may be added at some point.
 * title: "Title of your theme"  
